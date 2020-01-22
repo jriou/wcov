@@ -43,12 +43,12 @@ for(n in 1:nsim) {
     t = t.new
     times = c(times, t.new)
   }
-  epicurve = cumsum(hist(times, breaks = 0:max_time)$counts)
-  contr[n,5:94] = epicurve
+  epicurve = cumsum(hist(times, breaks = 0:max_time,plot=FALSE)$counts)
+  contr[n,6:95] = epicurve
   contr[n,"stopped"] = length(times) >= max_cases
   contr[n,"total_incidence"] = length(times)
-  print(paste0(n,"/",nsim," ... \n"))
+  print(paste0(n,"/",nsim))
 }
 
-save(contr, file=paste0("wcov_sims_2020-21-01_",args[[1]],".Rdata"))
-  
+# save
+save(contr, file=paste0("wcov_sims_2020-01-22_",args[[2]],"_",args[[1]],".Rdata"))
