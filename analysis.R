@@ -72,6 +72,8 @@ hdi(within$R0,credMass=.90)
 summary(within$k)
 hdi(within$k,credMass=.90)
 
+plot(density(within$sigma,adjust=3))
+plot(density(within$seed,adjust=3))
 
 
 g1 = ggplot() +
@@ -104,7 +106,7 @@ set_duration = as.numeric(as.Date("2020-01-18") - start_date_range[1])
 set_delays = seq(1,as.numeric(start_date_range[2]-start_date_range[1]),by=1) - 1
 set_seeds = c(1,10,20,30,40,50)
 set_R0 = chosen$R0
-set_k = chosen$k
+set_k = unique(allcontr$k)[14]
 set_sigma = unique(allcontr$sigma)
 set_replicates = 10
 
