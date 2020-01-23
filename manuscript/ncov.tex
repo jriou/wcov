@@ -20,7 +20,7 @@
 \usepackage{float}
 \usepackage{rotating}
 \usepackage[toc,page]{appendix} %appendix
-\usepackage[sort&compress,square,comma,authoryear]{natbib}
+%\usepackage[sort&compress,square,comma,authoryear]{natbib}
 
 \definecolor{maroon}{RGB}{176, 48, 96}
 \definecolor{orange2}{RGB}{238, 118, 0}
@@ -28,17 +28,17 @@
 \newcommand{\colsurvey}[1]{\textcolor{orange2}{#1}}
 
 
-\title{Early transmission pattern of Wuhan 2019-nCoV}
+\title{Patterns of early human-to-human transmission of Wuhan 2019-nCoV}
 
 
 \author{
-   Julien Riou \\
+   Julien Riou, MD, PhD \\
   Institute of Social and Preventive Medicine\\
   University of Bern\\
   Bern, Switzerland \\
   \texttt{julien.riou@ispm.unibe.ch} \\
   \And
-Christian L.~Althaus \\
+Christian L.~Althaus, PhD \\
 Institute of Social and Preventive Medicine\\
 University of Bern\\
 Bern, Switzerland \\
@@ -56,7 +56,7 @@ On December 31, 2019, the World Health Organization was notified about a cluster
 
 \section{Introduction}
 
-\citet{Shi:2020}
+\cite{Shi:2020}
 
 - Info about outbreak
 - Why it is important to understand transmission characteristics, and why we want to know $k$ and superspreading (limitation of study by Leung).
@@ -66,7 +66,7 @@ We used stochastic simulations in order to identify the likely transmission char
 \section{Methods}
 We performed stochastic simulations of the first few generations of human-to-human transmission of 2019-nCoV. 
 Simulations were initialized with one index case.
-For each primary case, we generated secondary cases according to a negative-binomial offspring distribution with mean $R_0$ and dispersion $k$.\citep{Lloyd-Smith:2005,Althaus:2015b}
+For each primary case, we generated secondary cases according to a negative-binomial offspring distribution with mean $R_0$ and dispersion $k$.\cite{Lloyd-Smith:2005,Althaus:2015b}
 The dispersion parameter $k$ can be interpreted as a measure of the probability of superspreading events (the lower the value of $k$, the higher the probability of superspreading).
 The generation time interval $D$ was assumed to be gamma-distributed with a shape parameter of 2, and a mean that varied between 7 and 14 days.
 We explored a wide range of parameter combinations (Table \ref{fig:tab1}) and ran 1,000 stochastic simulations for each individual combination. 
@@ -76,10 +76,10 @@ In a second step, we accounted for the uncertainty regarding the number of index
 An epidemic with several index cases can be considered as the sum of several independent epidemics with one index case each.
 We sampled (with replacement) $n$ of the one-index-case epidemics, sampled a date of onset for each index case, and summed the epidemic curves together.
 The sampling of the date of onset was done uniformly from a two-week interval around November 27, 2019, in coherence with early phylogenetic analyses of 11 2019-nCoV genomes.\cite{Rambaut:2020}
-This step was repeated 10 times for each combination of $R_0$ (22 points), $k$ (20 points), $D$ (8 points) and $n$ (6 points) for a total of 211,200 full epidemics simulated.
-Finally, we calculated the proportion of stochastic simulations that reached a total number of infected cases within the interval [1000, 9700] by January 18, 2020, as estimated by Imai and colleagues.\citep{Imai:2020}
+This step was repeated 480 times for each combination of $R_0$ (22 points) and $k$ (20 points) for a total of 211,200 full epidemics simulated that included the uncertainty on $D$, $n$ and $T$.
+Finally, we calculated the proportion of stochastic simulations that reached a total number of infected cases within the interval [1000, 9700] by January 18, 2020, as estimated by Imai and colleagues.\cite{Imai:2020}
 In a process related to approximated Bayesian computation (ABC), the parameter value combinations that led to simulations within that interval were treated as approximations to the posterior distributions of the parameters with uniform prior distributions.
-Model simulations and analyses were performed in the R software for statistical computing.\citep{R:2018} 
+Model simulations and analyses were performed in the R software for statistical computing.\cite{R:2018} 
 Code files are available on \url{https://github.com/jriou/wcov}.
 
 \begin{table}
@@ -106,7 +106,7 @@ Observed data at this point is compatible with a large range of values for the d
 However, our simulations indicate that very low values of $k$, corresponding to a large probability of superspreading events, are less likely.
 These estimates incorporate the uncertainty on the current total epidemic size (as of January 23, 2020) and on the date and scale of the initial zoonotic event (figure \ref{fig:fig3}).
 
-Comparison with other emerging viruses allows to put in perspective the low amount of information available regarding the transmission patterns of 2019-nCoV.
+Comparison with other emerging viruses in the past allows to put in perspective the available information regarding the transmission patterns of 2019-nCoV.
 Our estimates of $R_0$ and $k$ are more similar to previous estimates focusing on early human-to-human transmission of SARS-CoV in Beijing and Singapore\cite{Lloyd-Smith:2005} than of MERS-CoV\cite{Kucharski:2015b} (figure \ref{fig:fig1}).
 These estimates are also in line with those of 1918 Influenza.\cite{Fraser:2011}
 
@@ -140,9 +140,17 @@ These estimates are also in line with those of 1918 Influenza.\cite{Fraser:2011}
 
 \section{Discussion}
 
-Concerns are spreading regarding the emergent 2019-nCoV in Wuhan, China.
-As WHO is discussing about PHIEC but lacks information about the patterns of transmission of the disease
-This analysis focuses on the few data points available to
+The emergence of 2019-nCoV in Wuhan, China rises a lot of concern worldwide.
+A recent WHO meeting concluded that the lack of information about the patterns of transmission of the disease limited the ability of WHO to declare a public health emergency of international concern (PHEIC).\cite{whoreco}
+The increasing research activity on 2019-nCoV has led to estimates of animal-to-human transmission,\cite{Chen2020.01.19.911669}, estimates of epidemic size using air travel data,\cite{Imai:2020, vespi:2020}, and a better characterization of the virological characteristics of the virus.\cite{Shi:2020}
+This analysis is the first to focus on early human-to-human transmission.
+Our results indicate that 2019-nCoV has the potential for sustained human-to-human transmission.
+The patterns of human-to-human transmission suggest a closer relation with 
+
+
+ of a similar magnitude to what was observed during the early stages of SARS-CoV transmission in Singapore and Beijing.\cite{Lloyd-Smith:2005}
+Conver
+
 
 
 - List primary finding

@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Shi:2020}
 Zheng-Li Shi, Peng Zhou, Xing-Lou Yang, Xian-Guang Wang, Ben Hu, Lei Zhang, Wei
@@ -10,13 +10,6 @@ Zheng-Li Shi, Peng Zhou, Xing-Lou Yang, Xian-Guang Wang, Ben Hu, Lei Zhang, Wei
   outbreak in humans and its potential bat origin.
 \newblock {\em bioRxiv}, 2020.
 
-\bibitem{Rambaut:2020}
-Andrew Rambaut.
-\newblock {Preliminary phylogenetic analysis of 11 nCoV2019 genomes,
-  2020-01-19}.
-\newblock
-  \url{http://virological.org/t/preliminary-phylogenetic-analysis-of-11-ncov2019-genomes-2020-01-19/329}.
-
 \bibitem{Lloyd-Smith:2005}
 J~O Lloyd-Smith, S~J Schreiber, P~E Kopp, and W~M Getz.
 \newblock {Superspreading and the effect of individual variation on disease
@@ -27,6 +20,13 @@ J~O Lloyd-Smith, S~J Schreiber, P~E Kopp, and W~M Getz.
 Christian~L Althaus.
 \newblock {Ebola superspreading}.
 \newblock {\em Lancet Infect Dis}, 15(5):507--508, 2015.
+
+\bibitem{Rambaut:2020}
+Andrew Rambaut.
+\newblock {Preliminary phylogenetic analysis of 11 nCoV2019 genomes,
+  2020-01-19}.
+\newblock
+  \url{http://virological.org/t/preliminary-phylogenetic-analysis-of-11-ncov2019-genomes-2020-01-19/329}.
 
 \bibitem{Imai:2020}
 Natsuko Imai, Ilaria Dorigatti, Anne Cori, Christl Donnelly, Steven Riley, and
@@ -53,5 +53,25 @@ Christophe Fraser, Derek A~T Cummings, Don Klinkenberg, Donald~S Burke, and
   Neil~M Ferguson.
 \newblock {Influenza transmission in households during the 1918 pandemic}.
 \newblock {\em Am J Epidemiol}, 174(5):505--14, Sep 2011.
+
+\bibitem{whoreco}
+{WHO panel puts off decision on whether to sound alarm on rapid spread of new
+  virus.}
+\newblock
+  \url{https://www.sciencemag.org/news/2020/01/who-panel-puts-decision-whether-sound-alarm-rapid-spread-new-virus}.
+\newblock Accessed: 2020-01-23.
+
+\bibitem{Chen2020.01.19.911669}
+Tianmu Chen, Jia Rui, Qiupeng Wang, Zeyu Zhao, Jing-An Cui, and Ling Yin.
+\newblock A mathematical model for simulating the transmission of wuhan novel
+  coronavirus.
+\newblock {\em bioRxiv}, 2020.
+
+\bibitem{vespi:2020}
+M.~Chinazzi, J.~T. Davis, A.~Pastore y~Piontti, X.~Xiong, A.~Vespignani,
+  C.~Gioannini, M.~Litvinova, L.~Rossi, M.E. Halloran, and I.M.~Longini Jr.
+\newblock {Preliminary assessment of the international spreading risk
+  associated with the 2019 nCOV outbreak in Wuhan city}.
+\newblock \url{https://www.mobs-lab.org/2019ncov.html}.
 
 \end{thebibliography}
