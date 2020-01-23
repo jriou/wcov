@@ -10,14 +10,14 @@ allcontr = tbl_df(allcontr) %>%
 
 # controls ------------------------------------------------------------
 start_date_range = as.Date(c("2019-11-20","2019-12-04"))
-incidence_range = c(427,4471)
-incidence_date = as.Date("2020-01-12")
+incidence_range = c(1000,9700)
+incidence_date = as.Date("2020-01-18")
 set_durations = incidence_date - start_date_range
 set_seeds = c(1,10,20,30,40,50)
 
 # load post-processed data ------------------------------------------------------------
-load("wcoc_ppsims_2020-01-21.Rdata")
-pp_sims = pp_sims %>%
+load("wcoc_ppsims_2020-01-23.Rdata")
+pp_sims = pp_allsims %>%
   mutate(within_range=total_incidence>=incidence_range[1]&total_incidence<=incidence_range[2])
 
 # fig1: k ~ R0 -----------------------------------------------
@@ -66,21 +66,29 @@ ggsave(file="figure/fig1.pdf",height=6,width=9)
 # ABC ------------------------------------------------------------
 within = filter(pp_sims,within_range==TRUE)
 
-g1 = ggplot(within) +
-  geom_ribbon(aes(R0,ymin=0,ymax=1/(8-.8)),colour="black",fill="grey50",alpha=.5) +
-  geom_density(aes(R0),fill="lightblue",alpha=.8) +
-  scale_x_continuous(expand=c(0,0),breaks=1:8) +
-  scale_y_continuous(expand=c(0,0),limits=c(0,.6)) +
+library(HDInterval)
+summary(within$R0)
+hdi(within$R0,credMass=.90)
+summary(within$k)
+hdi(within$k,credMass=.90)
+
+
+
+g1 = ggplot() +
+  geom_ribbon(data=pp_sims,aes(R0,ymin=0,ymax=1/(8-.8)),colour="black",fill="grey50",alpha=.5) +
+  geom_density(data=within,aes(R0),fill="lightblue",alpha=.8) +
+  scale_x_continuous(expand=c(0,0),breaks=1:8,limits=c(0.8,5)) +
+  scale_y_continuous(expand=c(0,0),limits=c(0,.8)) +
   labs(x=expression(R[0]),y="PDF")
 g2 = ggplot(within) +
   geom_ribbon(aes(k,ymin=0,ymax=.32),fill="grey50",colour="black",alpha=.5) +
   geom_density(aes(k),fill="lightblue",alpha=.8) +
   scale_x_continuous(trans="log10",limits=c(0.01,10),expand=c(0,0)) +
-  scale_y_continuous(expand=c(0,0),limits=c(0,.6))+
+  scale_y_continuous(expand=c(0,0),limits=c(0,.8))+
   labs(x="Dispersion parameter, k",y="PDF")
 
-plot_grid(g1,g2,ncol=1)
-ggsave(file="figure/fig2.pdf",height=6,width=4)
+plot_grid(g1,g2,ncol=2)
+ggsave(file="figure/fig2.pdf",height=3,width=6)
 
 # plot one combination -------------------------------------------
 chosen = ungroup(tmp) %>%
@@ -158,24 +166,24 @@ ggsave(file="figure/fig3.pdf",height=6,width=9)
 
 
 g1b = g1 + 
-  annotate("errorbarh",y=8000,xmin=as.Date("2019-11-18"),xmax=as.Date("2019-12-16"),size=1,height=300) +
-  annotate("segment",x=mean(start_date_range)+8,y=3000,xend=as.Date("2019-12-02"),yend=8000) +
+  annotate("errorbarh",y=7900,xmin=as.Date("2019-11-25")+.7,xmax=as.Date("2019-12-13"),size=1,height=300) +
+  annotate("segment",x=mean(start_date_range)+8,y=3000,xend=mean(start_date_range)+8,yend=7900) +
   annotate("label",x=mean(start_date_range)+8,y=3000,label="Uncertainty on starting date")
 
 t_inc2 = t_inc %>%
   mutate(incidence2=incidence-lag(incidence,default=0)) %>%
-  filter(day2<=start_date_range[2])
+  filter(day2<=start_date_range[2]+10)
 g2 = ggplot(t_inc2) +
-  geom_line(aes(x=day2,y=incidence2,group=it),alpha=.2)+
+  geom_line(aes(x=day2,y=incidence2,group=it),alpha=.1)+
   scale_color_manual(values=c("black","red"),guide=FALSE) +
-  scale_x_date(breaks=as.Date(c("2019-11-20","2019-11-27","2019-12-04")),
-               labels=c("Nov 20","Nov 27","Dec 4")) +
+  scale_x_date(breaks=as.Date(c("2019-11-20","2019-11-27","2019-12-04","2019-12-11")),
+               labels=c("Nov 20","Nov 27","Dec 4","Dec 11")) +
   
-  coord_cartesian(xlim=c(start_date_range[1]-1,start_date_range[2]+1)) +
+  # coord_cartesian(xlim=c(start_date_range[1]-1,start_date_range[2]+1)) +
   
   labs(x=NULL,y="Daily incidence") +
   theme(axis.title.y = element_text(size=12))
-g1b + annotation_custom(
+g1 + annotation_custom(
     ggplotGrob(g2), 
     xmin = as.Date("2019-11-18"), xmax = as.Date("2019-12-16"), ymin = 8000, ymax = 12000
   )
