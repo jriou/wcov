@@ -34,3 +34,11 @@ scp UBELIX:projects/wcov/wcov_allsims_2020-01-22_18482752.Rdata /home/julien/Dro
 scp /home/julien/Dropbox/Unibe/wcov/wcov/postprocessing.R \
 /home/julien/Dropbox/Unibe/wcov/wcov/sb_postprocessing.sh \
 UBELIX:projects/wcov/.
+
+# append postprocessing
+pp_allsims = NULL
+for(i in 1:10) {
+  load(paste0("wcoc_ppsims_2020-01-23_18588999_",i,".Rdata"))
+  pp_allsims = rbind(pp_sims)
+}
+save(pp_allsims,file="wcoc_ppsims_2020-01-23.Rdata")

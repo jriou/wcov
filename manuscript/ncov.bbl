@@ -1,0 +1,57 @@
+\begin{thebibliography}{1}
+
+\bibitem{Shi:2020}
+Zheng-Li Shi, Peng Zhou, Xing-Lou Yang, Xian-Guang Wang, Ben Hu, Lei Zhang, Wei
+  Zhang, Hao-Rui Si, Yan Zhu, Bei Li, Chao-Lin Huang, Hui-Dong Chen, Jing Chen,
+  Yun Luo, Hua Guo, Ren-Di Jiang, Mei-Qin Liu, Ying Chen, Xu-Rui Shen, Xi~Wang,
+  Xiao-Shuang Zheng, Kai Zhao, Quan-Jiao Chen, Fei Deng, Lin-Lin Liu, Bing Yan,
+  Fa-Xian Zhan, Yan-Yi Wang, and Gengfu Xiao.
+\newblock Discovery of a novel coronavirus associated with the recent pneumonia
+  outbreak in humans and its potential bat origin.
+\newblock {\em bioRxiv}, 2020.
+
+\bibitem{Rambaut:2020}
+Andrew Rambaut.
+\newblock {Preliminary phylogenetic analysis of 11 nCoV2019 genomes,
+  2020-01-19}.
+\newblock
+  \url{http://virological.org/t/preliminary-phylogenetic-analysis-of-11-ncov2019-genomes-2020-01-19/329}.
+
+\bibitem{Lloyd-Smith:2005}
+J~O Lloyd-Smith, S~J Schreiber, P~E Kopp, and W~M Getz.
+\newblock {Superspreading and the effect of individual variation on disease
+  emergence}.
+\newblock {\em Nature}, 438(7066):355--9, Nov 2005.
+
+\bibitem{Althaus:2015b}
+Christian~L Althaus.
+\newblock {Ebola superspreading}.
+\newblock {\em Lancet Infect Dis}, 15(5):507--508, 2015.
+
+\bibitem{Imai:2020}
+Natsuko Imai, Ilaria Dorigatti, Anne Cori, Christl Donnelly, Steven Riley, and
+  Neil~M. Ferguson.
+\newblock {Report 2: Estimating the potential total number of novel Coronavirus
+  cases in Wuhan City, China}.
+\newblock
+  \url{https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/news--wuhan-coronavirus/}.
+
+\bibitem{R:2018}
+{R Core Team}.
+\newblock {\em {R: {A} {L}anguage and {E}nvironment for {S}tatistical
+  {C}omputing}}.
+\newblock R Foundation for Statistical Computing, Vienna, Austria, 2018.
+
+\bibitem{Kucharski:2015b}
+A~J Kucharski and C~L Althaus.
+\newblock {The role of superspreading in Middle East respiratory syndrome
+  coronavirus (MERS-CoV) transmission}.
+\newblock {\em Euro Surveill}, 20(25):14--8, Jun 2015.
+
+\bibitem{Fraser:2011}
+Christophe Fraser, Derek A~T Cummings, Don Klinkenberg, Donald~S Burke, and
+  Neil~M Ferguson.
+\newblock {Influenza transmission in households during the 1918 pandemic}.
+\newblock {\em Am J Epidemiol}, 174(5):505--14, Sep 2011.
+
+\end{thebibliography}
