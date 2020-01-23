@@ -6,14 +6,31 @@ scp /home/julien/Dropbox/Unibe/wcov/wcov/runsim.R \
 # concatenate simulations on server
 allcontr = NULL
 for(i in 1:1000) {
-  if(file.exists(paste0("wcov_sims_2020-21-01_",i,".Rdata"))) {
-    load(paste0("wcov_sims_2020-21-01_",i,".Rdata"))
-  } else {
-    load(paste0("wcov_sims_2020-21-01_",i,"j.Rdata"))
-  }
-  contr[,6:95] = contr[,5:94]
+  if(file.exists(paste0("wcov_sims_2020-01-22_18499363_",i,".Rdata"))) {
+    load(paste0("wcov_sims_2020-01-22_18499363_",i,".Rdata"))
   contr$idsim = i
   allcontr = rbind(allcontr,contr)
-  cat(i)
+  cat(i," ")
+  }
 }
-save(allcontr,"wcov_allsims_2020-01-21.Rdata")
+save(allcontr,file="wcov_allsims_2020-01-22_18499363.Rdata")
+# >>>
+scp UBELIX:projects/wcov/wcov_allsims_2020-01-22_18499363.Rdata /home/julien/Dropbox/Unibe/wcov/wcov/.
+
+allcontr = NULL
+for(i in 1:1000) {
+  if(file.exists(paste0("wcov_sims_2020-01-22_18482752_",i,".Rdata"))) {
+    load(paste0("wcov_sims_2020-01-22_18482752_",i,".Rdata")) 
+  contr$idsim = i
+  allcontr = rbind(allcontr,contr)
+  cat(i," ")
+  }
+}
+save(allcontr,file="wcov_allsims_2020-01-22_18482752.Rdata")
+# >>>
+scp UBELIX:projects/wcov/wcov_allsims_2020-01-22_18482752.Rdata /home/julien/Dropbox/Unibe/wcov/wcov/.
+
+# run postprocessing
+scp /home/julien/Dropbox/Unibe/wcov/wcov/postprocessing.R \
+/home/julien/Dropbox/Unibe/wcov/wcov/sb_postprocessing.sh \
+UBELIX:projects/wcov/.

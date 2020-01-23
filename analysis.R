@@ -15,7 +15,17 @@ set_durations = incidence_date - start_date_range
 set_seeds = c(1,10,20,30,40,50)
 
 # SARS and MERS
+other_diseases = rbind(
+  c("MERS","MERS",.47,.29,.8,.26,.09,1.24),
+  c("SARS","SARS - Singapore",2.55,.5,4.5,.21,.15,1000),
+  c("SARS","SARS - Beijing",1.88,.41,3.32,.12,.078,.42),
+  c("Influenza","1918 Influenza",1.77,1.61,1.95,.94,.59,1.72)
+) %>%
+  as.data.frame()
+names(other_diseases)=c("virus","label","R0","R0_min","R0_max","k","k_min","k_max")
+
 SARS_MERS  = data.frame(cov=c("MERS","SARS"),
+                        
                         R0=c(.8,2.5),
                         R0_min=c(.8,2),
                         R0_max=c(1.13,3),
