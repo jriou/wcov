@@ -5,11 +5,8 @@ args = as.numeric(commandArgs(trailingOnly=TRUE))
 library(tidyverse)
 
 # load sim
-load("wcov_allsims_2020-01-21.Rdata")
+load("wcov_allsims_2020-01-22_18499363.Rdata")
 allsims = tbl_df(allcontr)
-
-load("wcov_allsims_2020-01-22_18482752.Rdata")
-allsims = bind_rows(allsims,tbl_df(allcontr))
 
 # load("wcov_allsims_2020-01-22_18499363.Rdata")
 
@@ -43,4 +40,4 @@ for(i in  1:nrow(pp_sims)) {
   pp_sims[i,"total_incidence"] = unlist(inc)
   cat(i," ")
 }
-save(pp_sims,file="wcoc_ppsims_2020-01-22_",args[[2]],"_",args[[1]],".Rdata")
+save(pp_sims,file="wcoc_ppsims_2020-01-23_",args[[2]],"_",args[[1]],".Rdata")
