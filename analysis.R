@@ -1,6 +1,7 @@
 # lib ------------------------------------------------------------
 library(tidyverse)
 library(cowplot)
+library(egg)
 
 # load sim ------------------------------------------------------------
 load("wcov_allsims_2020-01-21.Rdata")
@@ -68,7 +69,7 @@ within = filter(pp_sims,within_range==TRUE)
 g1 = ggplot(within) +
   geom_ribbon(aes(R0,ymin=0,ymax=1/(8-.8)),colour="black",fill="grey50",alpha=.5) +
   geom_density(aes(R0),fill="lightblue",alpha=.8) +
-  scale_x_continuous(expand=c(0,0)) +
+  scale_x_continuous(expand=c(0,0),breaks=1:8) +
   scale_y_continuous(expand=c(0,0),limits=c(0,.6)) +
   labs(x=expression(R[0]),y="PDF")
 g2 = ggplot(within) +
@@ -110,7 +111,7 @@ for(i in  1:nrow(chosen_pp)) {
     mutate(delay=sample(set_delays,size=p_seed,replace=TRUE)) %>% 
     gather("day","incidence",6:95) %>%
     arrange(idsim) %>%
-    mutate(day=delay+as.numeric(gsub("X","",day))) %>%
+    mutate(day=delay-1+as.numeric(gsub("X","",day))) %>%
       filter(day<=set_duration) %>%
     group_by(R0,k,sigma,day) %>%
     summarise(incidence=sum(incidence)) %>%
@@ -118,12 +119,14 @@ for(i in  1:nrow(chosen_pp)) {
     bind_rows(inc)
   cat(i," ")
 }
-inc %>%
+
+t_inc = inc %>%
   mutate(day2=day+start_date_range[1]) %>%
   group_by(it) %>%
   mutate(total_incidence=max(incidence),
-         within=total_incidence>=incidence_range[1]&total_incidence<=incidence_range[2]) %>%
-  ggplot() +
+         within=total_incidence>=incidence_range[1]&total_incidence<=incidence_range[2])
+
+g1 = ggplot(t_inc) +
   geom_line(aes(x=day2,y=incidence,group=it,colour=within),alpha=.2) +
   
   annotate("errorbarh",y=800,xmin=start_date_range[1],xmax=start_date_range[2],size=1,height=300) +
@@ -134,17 +137,47 @@ inc %>%
   annotate("segment",x=incidence_date-25,y=8000,xend=incidence_date+1,yend=mean(incidence_range)) +
   annotate("label",x=incidence_date-25,y=8000,label="Uncertainty on epidemic\nsize on Jan. 18th") +
   
-  annotate("errorbar",x=start_date_range[1]-3,ymin=1,ymax=50,size=1) +
-  annotate("segment",x=start_date_range[1]+1,y=4500,xend=start_date_range[1]-3,yend=50) +
+  annotate("errorbar",x=start_date_range[1]-1,ymin=1,ymax=50,size=1) +
+  annotate("segment",x=start_date_range[1],y=4500,xend=start_date_range[1]-1,yend=50) +
   annotate("label",x=start_date_range[1]+1,y=4500,label="Uncertainty on\ninitial seed") +
+  
+  # annotate("rect",x=start_date_range[1]-1,xend=start_date_range[2]+1,y=0,yend=200) +
   
   scale_color_manual(values=c("black","red"),guide=FALSE) +
   scale_x_date(breaks=as.Date(c("2019-11-15","2019-12-01","2019-12-15","2020-01-01","2020-01-15")),
-               labels=c("Nov. 15th","Dec. 1st","Dec. 15th","Jan. 1st","Jan. 15th")) +
+               labels=c("Nov. 15","Dec 1","Dec 15","Jan 1","Jan 15")) +
   
   coord_cartesian(ylim=c(0,12000)) +
   
   labs(x="Time",y="Cumulative incidence")
+
+
+g1
 ggsave(file="figure/fig3.pdf",height=6,width=9)
 
+
+
+g1b = g1 + 
+  annotate("errorbarh",y=8000,xmin=as.Date("2019-11-18"),xmax=as.Date("2019-12-16"),size=1,height=300) +
+  annotate("segment",x=mean(start_date_range)+8,y=3000,xend=as.Date("2019-12-02"),yend=8000) +
+  annotate("label",x=mean(start_date_range)+8,y=3000,label="Uncertainty on starting date")
+
+t_inc2 = t_inc %>%
+  mutate(incidence2=incidence-lag(incidence,default=0)) %>%
+  filter(day2<=start_date_range[2])
+g2 = ggplot(t_inc2) +
+  geom_line(aes(x=day2,y=incidence2,group=it),alpha=.2)+
+  scale_color_manual(values=c("black","red"),guide=FALSE) +
+  scale_x_date(breaks=as.Date(c("2019-11-20","2019-11-27","2019-12-04")),
+               labels=c("Nov 20","Nov 27","Dec 4")) +
+  
+  coord_cartesian(xlim=c(start_date_range[1]-1,start_date_range[2]+1)) +
+  
+  labs(x=NULL,y="Daily incidence") +
+  theme(axis.title.y = element_text(size=12))
+g1b + annotation_custom(
+    ggplotGrob(g2), 
+    xmin = as.Date("2019-11-18"), xmax = as.Date("2019-12-16"), ymin = 8000, ymax = 12000
+  )
+ggsave(file="figure/fig3b.pdf",height=6,width=9)
 
