@@ -16,7 +16,7 @@ Zheng-Li Shi, Peng Zhou, Xing-Lou Yang, Xian-Guang Wang, Ben Hu, Lei Zhang, Wei
 \newblock {\em bioRxiv}, 2020.
 
 \bibitem{wiki}
-Andrew Rambaut.
+Wikipedia.
 \newblock {2019–20 outbreak of novel coronavirus 2019-nCoV}.
 \newblock
   \url{https://en.wikipedia.org/wiki/2019–20_outbreak_of_novel_coronavirus_2019-nCoV}.
@@ -84,6 +84,13 @@ M.~Chinazzi, J.~T. Davis, A.~Pastore y~Piontti, X.~Xiong, A.~Vespignani,
 \newblock {Preliminary assessment of the international spreading risk
   associated with the 2019 nCOV outbreak in Wuhan city}.
 \newblock \url{https://www.mobs-lab.org/2019ncov.html}.
+
+\bibitem{peng2020real}
+Peng Wu, Xinxin Hao, Eric H~Y Lau, Jessica~Y Wong, Kathy S~M Leung, Joseph~T
+  Wu, Benjamin~J Cowling, and Gabriel~M Leung.
+\newblock Real-time tentative assessment of the epidemiological characteristics
+  of novel coronavirus infections in wuhan, china, as at 22 january 2020.
+\newblock {\em Eurosurveillance}, 25(3), 2020.
 
 \bibitem{oh2015middle}
 Myoung-don Oh, Pyoeng~Gyun Choe, Hong~Sang Oh, Wan~Beom Park, Sang-Min Lee,

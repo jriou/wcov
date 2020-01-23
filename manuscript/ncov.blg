@@ -3,44 +3,44 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: ncov.aux
 The style file: unsrt.bst
 Database file #1: ncov.bib.bib
-You've used 15 entries,
+You've used 16 entries,
             1791 wiz_defined-function locations,
-            539 strings with 7259 characters,
-and the built_in function-call counts, 3382 in all, are:
-= -- 226
-> -- 282
+            544 strings with 7573 characters,
+and the built_in function-call counts, 3616 in all, are:
+= -- 239
+> -- 308
 < -- 0
-+ -- 101
-- -- 86
-* -- 266
-:= -- 593
-add.period$ -- 44
-call.type$ -- 15
-change.case$ -- 14
++ -- 110
+- -- 94
+* -- 288
+:= -- 639
+add.period$ -- 47
+call.type$ -- 16
+change.case$ -- 15
 chr.to.int$ -- 0
-cite$ -- 15
-duplicate$ -- 107
-empty$ -- 292
-format.name$ -- 86
-if$ -- 706
+cite$ -- 16
+duplicate$ -- 115
+empty$ -- 307
+format.name$ -- 94
+if$ -- 752
 int.to.chr$ -- 0
-int.to.str$ -- 15
-missing$ -- 8
-newline$ -- 77
-num.names$ -- 13
-pop$ -- 49
+int.to.str$ -- 16
+missing$ -- 9
+newline$ -- 82
+num.names$ -- 14
+pop$ -- 50
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 54
+skip$ -- 58
 stack$ -- 0
 substring$ -- 126
-swap$ -- 16
+swap$ -- 17
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 22
-width$ -- 17
-write$ -- 151
+while$ -- 23
+width$ -- 18
+write$ -- 162
