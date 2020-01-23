@@ -39,6 +39,18 @@ UBELIX:projects/wcov/.
 pp_allsims = NULL
 for(i in 1:10) {
   load(paste0("wcoc_ppsims_2020-01-23_18588999_",i,".Rdata"))
-  pp_allsims = rbind(pp_sims)
+  pp_allsims = rbind(pp_allsims,pp_sims)
+  cat(i)
+}
+j = 10
+for(i in 1:100) {
+  if(j<100) {
+    if(file.exists(paste0("wcoc_ppsims_2020-01-23_18602567_",i,".Rdata"))) {
+      load(paste0("wcoc_ppsims_2020-01-23_18602567_",i,".Rdata"))
+      pp_allsims = rbind(pp_allsims,pp_sims)
+      j = j+1
+      cat(j," ")
+    }
+  }
 }
 save(pp_allsims,file="wcoc_ppsims_2020-01-23.Rdata")
