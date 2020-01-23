@@ -72,9 +72,10 @@ The generation time interval $D$ was assumed to be gamma-distributed with a shap
 We explored a wide range of parameter combinations (Table \ref{fig:tab1}) and ran 1,000 stochastic simulations for each individual combination. 
 This corresponds to a total of 3.52 million one-index-case simulations that were run on UBELIX (\url{http://www.id.unibe.ch/hpc}), the high performance computing cluster at the University of Bern. 
 
-We then accounted for the uncertainty regarding the number of index cases $n$ and the date $T$ of the initial zoonotic animal-to-human transmissions at the wet market in Wuhan. 
-An epidemic with several index case can be considered as the sum of several independent epidemics with one index case each.
-We sampled (with replacement) $n$ of the epidemics simulated with one single index case, and sampled a date of onset for the index case uniformly from a two-week interval around November 27, 2019, in coherence with early phylogenetic analyses of 11 2019-nCoV genomes.\cite{Rambaut:2020}
+In a second step, we accounted for the uncertainty regarding the number of index cases $n$ and the date $T$ of the initial zoonotic animal-to-human transmissions at the wet market in Wuhan. 
+An epidemic with several index cases can be considered as the sum of several independent epidemics with one index case each.
+We sampled (with replacement) $n$ of the one-index-case epidemics, sampled a date of onset for each index case, and summed the epidemic curves together.
+The sampling of the date of onset was done uniformly from a two-week interval around November 27, 2019, in coherence with early phylogenetic analyses of 11 2019-nCoV genomes.\cite{Rambaut:2020}
 This step was repeated 10 times for each combination of $R_0$ (22 points), $k$ (20 points), $D$ (8 points) and $n$ (6 points) for a total of 211,200 full epidemics simulated.
 Finally, we calculated the proportion of stochastic simulations that reached a total number of infected cases within the interval [1000, 9700] by January 18, 2020, as estimated by Imai and colleagues.\citep{Imai:2020}
 In a process related to approximated Bayesian computation (ABC), the parameter value combinations that led to simulations within that interval were treated as approximations to the posterior distributions of the parameters with uniform prior distributions.
