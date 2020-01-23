@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.7.9)  23 JAN 2020 21:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.7.9)  23 JAN 2020 22:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1174,20 +1174,23 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 53.
 LaTeX Font Info:    Font shape `T1/ptm/bx/sc' in size <12> not available
 (Font)              Font shape `T1/ptm/b/sc' tried instead on input line 53.
+
+Underfull \vbox (badness 6510) has occurred while \output is active []
+
  [1
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<../figure/fig2.pdf, id=57, 433.62pt x 216.81pt>
-File: ../figure/fig2.pdf Graphic file (type pdf)
-<use ../figure/fig2.pdf>
-Package pdftex.def Info: ../figure/fig2.pdf  used on input line 125.
+<../figure/fig2b.pdf, id=56, 433.62pt x 216.81pt>
+File: ../figure/fig2b.pdf Graphic file (type pdf)
+<use ../figure/fig2b.pdf>
+Package pdftex.def Info: ../figure/fig2b.pdf  used on input line 125.
 (pdftex.def)             Requested size: 281.85585pt x 140.93474pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../figure/fig3b.pdf, id=58, 650.43pt x 433.62pt>
+<../figure/fig3b.pdf, id=57, 650.43pt x 433.62pt>
 File: ../figure/fig3b.pdf Graphic file (type pdf)
 <use ../figure/fig3b.pdf>
 Package pdftex.def Info: ../figure/fig3b.pdf  used on input line 133.
@@ -1195,7 +1198,7 @@ Package pdftex.def Info: ../figure/fig3b.pdf  used on input line 133.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../figure/fig1.pdf, id=61, 650.43pt x 433.62pt>
+<../figure/fig1.pdf, id=60, 650.43pt x 433.62pt>
 File: ../figure/fig1.pdf Graphic file (type pdf)
 <use ../figure/fig1.pdf>
 Package pdftex.def Info: ../figure/fig1.pdf  used on input line 141.
@@ -1203,11 +1206,8 @@ Package pdftex.def Info: ../figure/fig1.pdf  used on input line 141.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2pdfTeX warning (ext4): destination with the same identifier (name{table.1}) 
-has been already used, duplicate ignored
+[2pdfTeX warning (ext4): destination with the same identifier (name{table.1}) h
+as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -1217,22 +1217,21 @@ ure.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.156 
+l.167 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.156 
-       <../figure/fig2.pdf> <../figure/fig3b.pdf>] [4pdfTeX warning (ext4): des
-tination with the same identifier (name{figure.3}) has been already used, dupli
-cate ignored
+l.167 
+       <../figure/fig2b.pdf> <../figure/fig3b.pdf>] [4pdfTeX warning (ext4): de
+stination with the same identifier (name{figure.3}) has been already used, dupl
+icate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.177 O
-       ur analysis suggests that the early pattern of human-to-human transmi...
- <../figure/fig1.pdf>] (./ncov.bbl
+l.184 \section
+              {Acknowledgements} <../figure/fig1.pdf>] (./ncov.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--7
 []\T1/ptm/m/n/10 (+20) Pneumonia of un-known cause ^^U China.  []$\T1/cmtt/m/n/
 10 https : / / www . who . int / csr / don /
@@ -1273,13 +1272,13 @@ Package rerunfilecheck Info: File `ncov.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 195.
  ) 
 Here is how much of TeX's memory you used:
- 19484 strings out of 492982
- 355091 string characters out of 6134897
- 565299 words of memory out of 5000000
+ 19481 strings out of 492982
+ 355072 string characters out of 6134897
+ 564016 words of memory out of 5000000
  22510 multiletter control sequences out of 15000+600000
- 43127 words of font info for 120 fonts, out of 8000000 for 9000
+ 42997 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,12n,54p,1346b,443s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,11n,54p,1346b,441s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/
 fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
@@ -1288,10 +1287,10 @@ msfonts/cm/cmr7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/times/utmri8a.pfb>
-Output written on ncov.pdf (6 pages, 269625 bytes).
+Output written on ncov.pdf (6 pages, 407777 bytes).
 PDF statistics:
- 196 PDF objects out of 1000 (max. 8388607)
- 166 compressed objects within 2 object streams
+ 193 PDF objects out of 1000 (max. 8388607)
+ 163 compressed objects within 2 object streams
  34 named destinations out of 1000 (max. 500000)
  18996 words of extra memory for PDF output out of 20736 (max. 10000000)
 
