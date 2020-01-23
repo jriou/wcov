@@ -1,88 +1,150 @@
-# lib
+# lib ------------------------------------------------------------
 library(tidyverse)
 library(cowplot)
 
-# load sim
+# load sim ------------------------------------------------------------
 load("wcov_allsims_2020-01-21.Rdata")
 allcontr = tbl_df(allcontr) %>%
   filter(!(idsim %in% c(902,904,905)))
 
-# controls
+# controls ------------------------------------------------------------
 start_date_range = as.Date(c("2019-11-20","2019-12-04"))
 incidence_range = c(427,4471)
 incidence_date = as.Date("2020-01-12")
 set_durations = incidence_date - start_date_range
 set_seeds = c(1,10,20,30,40,50)
 
-# SARS and MERS
-other_diseases = rbind(
-  c("MERS","MERS",.47,.29,.8,.26,.09,1.24),
-  c("SARS","SARS - Singapore",2.55,.5,4.5,.21,.15,1000),
-  c("SARS","SARS - Beijing",1.88,.41,3.32,.12,.078,.42),
-  c("Influenza","1918 Influenza",1.77,1.61,1.95,.94,.59,1.72)
-) %>%
-  as.data.frame()
-names(other_diseases)=c("virus","label","R0","R0_min","R0_max","k","k_min","k_max")
-
-SARS_MERS  = data.frame(cov=c("MERS","SARS"),
-                        
-                        R0=c(.8,2.5),
-                        R0_min=c(.8,2),
-                        R0_max=c(1.13,3),
-                        k=c(.26,0.16),
-                        k_min=c(.11,.11),
-                        k_max=c(.87,.64))
-
-# plot one epidemic
-duration = 45
-comb = 1265
-filter(allcontr,n==comb) 
-
-tmp = filter(allcontr,n==comb) %>%
-  mutate_(total_incidence=paste0("X",45))
-
-
-summarise(tmp,mean(total_incidence>1))
-summarise(tmp,mean(total_incidence>=incidence_range[1]&total_incidence<=incidence_range[2]))
-
-tmp %>%
-  gather("day","cum_inc",6:95) %>%
-  mutate(day=as.numeric(gsub("X","",day)),
-         within_range=total_incidence>=incidence_range[1]&total_incidence<=incidence_range[2]) %>% 
-  ggplot() +
-  geom_ribbon(aes(x=day),ymin=incidence_range[1],ymax=incidence_range[2],fill="orange",alpha=.1) +
-  geom_line(aes(x=day,y=cum_inc,group=idsim),alpha=.2) +
-  scale_colour_manual(values=c("black","orange"),guide=FALSE) +
-  coord_cartesian(xlim=c(0,duration),ylim=c(0,2*incidence_range[2])) +
-  labs(x="Time (days)",y="Cumulative incidence")
-
-
-# load post-processed data
+# load post-processed data ------------------------------------------------------------
 load("wcoc_ppsims_2020-01-21.Rdata")
 pp_sims = pp_sims %>%
   mutate(within_range=total_incidence>=incidence_range[1]&total_incidence<=incidence_range[2])
 
-# fig1: k ~ R0
+# fig1: k ~ R0 -----------------------------------------------
+
+# SARS and MERS
+other_diseases = rbind(
+  c("MERS","MERS-CoV",.47,.29,.8,.26,.09,1.24,.23,.65),
+  c("SARS","SARS-CoV - Singapore",2.55,.5,4.5,.21,.15,1000,3.2,.77),
+  c("SARS","SARS-CoV - Beijing",1.88,.41,3.32,.12,.078,.42,2.4,.03),
+  c("Influenza","1918 Influenza",1.77,1.61,1.95,.94,.59,1.72,1.2,3)) %>%
+  as.data.frame() 
+names(other_diseases)=c("virus","label","R0","R0_min","R0_max","k","k_min","k_max","label.y","label.x")
+for(i in 3:10) other_diseases[,i] = as.numeric(as.character(other_diseases[,i]))
+
+# summarise samples
 tmp = pp_sims %>%
   group_by(R0,k) %>%
   summarise(within_range=mean(within_range))
   
+# plot
 ggplot(tmp) +
   geom_raster(data=tmp,aes(x=k,y=R0,fill=within_range),alpha=.8) +
   scale_x_continuous(trans="log10",breaks=c(0.001,.01,.1,1,10),expand=c(0,0)) +
-  scale_y_continuous(expand=c(0,0),breaks=c(1,3,5,7)) +
-  scale_fill_gradient(low="grey90",high="red") +
+  scale_y_continuous(expand=c(0,0),breaks=c(1,2,3,4,5),labels = c(1,2,3,4,5)) +
+  scale_fill_gradient(low="white",high="red") +
+  coord_cartesian(xlim=c(0.01,10),ylim=c(0,5)) +
   labs(x="Dispersion parameter, k",y=expression(R[0]),fill=NULL) +
+  geom_hline(yintercept=1,linetype=2) +
   
-  geom_point(data=SARS_MERS,aes(x=k,y=R0)) +
-  geom_errorbar(data=SARS_MERS,aes(x=k,ymin=R0_min,ymax=R0_max),width=0) +
-  geom_errorbarh(data=SARS_MERS,aes(y=R0,xmin=k_min,xmax=k_max),height=0) +
+  geom_point(data=other_diseases,aes(x=k,y=R0),size=3) +
+  geom_errorbar(data=other_diseases,aes(x=k,ymin=R0_min,ymax=R0_max),width=0) +
+  geom_errorbarh(data=other_diseases,aes(y=R0,xmin=k_min,xmax=k_max),height=0) +
+  
+  geom_segment(data=other_diseases,aes(x=label.x,y=label.y,xend=k,yend=R0),linetype=3) +
+  geom_label(data=other_diseases,aes(x=label.x,y=label.y,label=label)) +
 
-  theme(legend.position="bottom",
-        legend.direction = "horizontal",
-        legend.key.width = unit(70,"pt"))
+  scale_colour_manual(values=c("steelblue","seagreen","purple"),guide=FALSE) +
+  scale_shape_discrete(guide=FALSE) +
+  
+  theme(legend.position="right",
+        legend.justification = "center",
+        legend.key.height = unit(60,"pt"))
+ggsave(file="figure/fig1.pdf",height=6,width=9)
 
-# ABC
 
+# ABC ------------------------------------------------------------
+within = filter(pp_sims,within_range==TRUE)
+
+g1 = ggplot(within) +
+  geom_ribbon(aes(R0,ymin=0,ymax=1/(8-.8)),colour="black",fill="grey50",alpha=.5) +
+  geom_density(aes(R0),fill="lightblue",alpha=.8) +
+  scale_x_continuous(expand=c(0,0)) +
+  scale_y_continuous(expand=c(0,0),limits=c(0,.6)) +
+  labs(x=expression(R[0]),y="PDF")
+g2 = ggplot(within) +
+  geom_ribbon(aes(k,ymin=0,ymax=.32),fill="grey50",colour="black",alpha=.5) +
+  geom_density(aes(k),fill="lightblue",alpha=.8) +
+  scale_x_continuous(trans="log10",limits=c(0.01,10),expand=c(0,0)) +
+  scale_y_continuous(expand=c(0,0),limits=c(0,.6))+
+  labs(x="Dispersion parameter, k",y="PDF")
+
+plot_grid(g1,g2,ncol=1)
+ggsave(file="figure/fig2.pdf",height=6,width=4)
+
+# plot one combination -------------------------------------------
+chosen = ungroup(tmp) %>%
+  filter(within_range==max(within_range))
+
+# controls
+start_date_range = as.Date(c("2019-11-20","2019-12-04"))
+incidence_range = c(1000,9700)
+incidence_date = as.Date("2020-01-18")
+set_duration = as.numeric(as.Date("2020-01-18") - start_date_range[1])
+set_delays = seq(1,as.numeric(start_date_range[2]-start_date_range[1]),by=1) - 1
+set_seeds = c(1,10,20,30,40,50)
+set_R0 = chosen$R0
+set_k = chosen$k
+set_sigma = unique(allcontr$sigma)
+set_replicates = 10
+
+# sampling
+chosen_pp = expand.grid(R0=set_R0,k=set_k,sigma=set_sigma,seed=set_seeds,n=1:set_replicates,total_incidence=NA)
+inc = NULL
+for(i in  1:nrow(chosen_pp)) {
+  p_R0 = chosen_pp[i,"R0"]
+  p_k = chosen_pp[i,"k"]
+  p_sigma = chosen_pp[i,"sigma"]
+  p_seed = chosen_pp[i,"seed"]
+  inc = filter(allcontr,R0==p_R0,k==p_k,sigma==p_sigma) %>%
+    sample_n(p_seed,replace=TRUE) %>%
+    mutate(delay=sample(set_delays,size=p_seed,replace=TRUE)) %>% 
+    gather("day","incidence",6:95) %>%
+    arrange(idsim) %>%
+    mutate(day=delay+as.numeric(gsub("X","",day))) %>%
+      filter(day<=set_duration) %>%
+    group_by(R0,k,sigma,day) %>%
+    summarise(incidence=sum(incidence)) %>%
+    mutate(seed=p_seed,it=i) %>%
+    bind_rows(inc)
+  cat(i," ")
+}
+inc %>%
+  mutate(day2=day+start_date_range[1]) %>%
+  group_by(it) %>%
+  mutate(total_incidence=max(incidence),
+         within=total_incidence>=incidence_range[1]&total_incidence<=incidence_range[2]) %>%
+  ggplot() +
+  geom_line(aes(x=day2,y=incidence,group=it,colour=within),alpha=.2) +
+  
+  annotate("errorbarh",y=800,xmin=start_date_range[1],xmax=start_date_range[2],size=1,height=300) +
+  annotate("segment",x=mean(start_date_range)+8,y=3000,xend=mean(start_date_range),yend=800) +
+  annotate("label",x=mean(start_date_range)+8,y=3000,label="Uncertainty on starting date") +
+  
+  annotate("errorbar",x=incidence_date+1,ymin=incidence_range[1],ymax=incidence_range[2],size=1) +
+  annotate("segment",x=incidence_date-25,y=8000,xend=incidence_date+1,yend=mean(incidence_range)) +
+  annotate("label",x=incidence_date-25,y=8000,label="Uncertainty on epidemic\nsize on Jan. 18th") +
+  
+  annotate("errorbar",x=start_date_range[1]-3,ymin=1,ymax=50,size=1) +
+  annotate("segment",x=start_date_range[1]+1,y=4500,xend=start_date_range[1]-3,yend=50) +
+  annotate("label",x=start_date_range[1]+1,y=4500,label="Uncertainty on\ninitial seed") +
+  
+  scale_color_manual(values=c("black","red"),guide=FALSE) +
+  scale_x_date(breaks=as.Date(c("2019-11-15","2019-12-01","2019-12-15","2020-01-01","2020-01-15")),
+               labels=c("Nov. 15th","Dec. 1st","Dec. 15th","Jan. 1st","Jan. 15th")) +
+  
+  coord_cartesian(ylim=c(0,12000)) +
+  
+  labs(x="Time",y="Cumulative incidence")
+ggsave(file="figure/fig3.pdf",height=6,width=9)
 
 
