@@ -27,7 +27,7 @@
 \newcommand{\colsurvey}[1]{\textcolor{orange2}{#1}}
 
 
-\title{Early transmission patterns of Wuhan 2019-nCoV}
+\title{Early transmission pattern of Wuhan 2019-nCoV}
 
 
 \author{
@@ -50,15 +50,12 @@ Bern, Switzerland \\
 \maketitle
 
 \begin{abstract}
-On December 30, 2019, Chinese authorities informed about a cluster of pneumonia of unknown aetiology that was later identified to be caused by the emergence of a new coronavirus (2019-nCoV) in the city of Wuhan. As of January 22, 2020, 453 cases have been confirmed in China and 10 cases in several other countries. Understanding the transmission characteristics and the potential for sustained human-to-human transmission of 2019-nCoV is critically important for coordinating current screening and containment strategies. We performed stochastic simulations of early outbreak trajectories that are consistent with the epidemiological findings to date. We found that transmission of 2019-nCoV appears to be similar to severe acute respiratory syndrome-related coronavirus (SARS-CoV), with considerable potential for superspreading events. These findings underline the importance of heightened surveillance and screening, particularly at airports, in order to prevent further international spread of 2019-nCoV.**
-
+On December 31, 2019, the World Health Organization was notified about a cluster of pneumonia of unknown etiology in the city of Wuhan, China. Chinese authorities later identified a new coronavirus (2019-nCoV) as the causative agent of the outbreak. As of January 23, 2020, 650 cases have been confirmed in China and several other countries. Understanding the transmission characteristics and the potential for sustained human-to-human transmission of 2019-nCoV is critically important for coordinating current screening and containment strategies, and determining whether the outbreak constitutes a public health emergency of international concern (PHEIC). We performed stochastic simulations of early outbreak trajectories that are consistent with the epidemiological findings to date. We found the basic reproduction number, $R_0$, to be around X (interquartile range: X--X), indicating the potential for sustained human-to-human transmission. Transmission characteristics appear to be similar to severe acute respiratory syndrome-related coronavirus (SARS-CoV) and the 1918 pandemic influenza. These findings underline the importance of heightened screening, surveillance and control efforts, particularly at airports and other travel hubs, in order to prevent further international spread of 2019-nCoV.
 \end{abstract}
 
-
-\keywords{Human immunodeficiency virus \and antiretroviral therapy \and non-nucleoside reverse-transcriptase inhibitor \and drug resistance \and mathematical model \and southern Africa}
-
-
 \section{Introduction}
+
+\citet{Shi:2020}
 
 - Info about outbreak
 - Why it is important to understand transmission characteristics, and why we want to know $k$ and superspreading (limitation of study by Leung).
@@ -66,9 +63,9 @@ On December 30, 2019, Chinese authorities informed about a cluster of pneumonia 
 We used stochastic simulations in order to identify the likely transmission characteristics that have results in the early outbreak trajectory as reported to date.
 
 \section{Methods}
-We performed stochastic simulations of the early epidemic spread of 2019-nCoV. Simulations were initialized with $n$ index cases, corresponding to the number of zoonotic animal-to-human transmissions at the wet market in Wuhan. For each infected case, we generated secondary cases according to a negative-binomial offspring distribution with mean $R_0$ and dispersion $k$. The generation time interval $D$ was assumed to be gamma-distributed with a shape parameter of 2. We further varied the date $T$ of the zoonotic transmission events.
+We performed stochastic simulations of the early epidemic spread of 2019-nCoV. Simulations were initialized with $n$ index cases, corresponding to the number of zoonotic animal-to-human transmissions at the wet market in Wuhan. For each infected case, we generated secondary cases according to a negative-binomial offspring distribution with mean $R_0$ and dispersion $k$ \citep{Althaus:2015b}. The generation time interval $D$ was assumed to be gamma-distributed with a shape parameter of 2. We further varied the date $T$ of the zoonotic transmission events.
 
-We explored a wide range of parameter combinations (Table 1) and ran 10,000 stochastic simulations for each individual combination. This corresponds to a total of 32 million individual simulations that were run on UBELIX ([http://www.id.unibe.ch/hpc](http://www.id.unibe.ch/hpc)), the high performance computing cluster at the University of Bern. For each individual combination of $R_0$ and $k$, we calculated the proportion of stochastic simulations that reached a total number of infected cases within the interval [427, 4,471] by January 12, 2020, as estimated by Imai et al. (REF). Model simulations and analyses were performed in `R` (REF). Code files are available on GitHub: [https://github.com/jriou/wcov](https://github.com/jriou/wcov)
+We explored a wide range of parameter combinations (Table 1) and ran 10,000 stochastic simulations for each individual combination. This corresponds to a total of X million individual simulations that were run on UBELIX (\url{http://www.id.unibe.ch/hpc}), the high performance computing cluster at the University of Bern. For each individual combination of $R_0$ and $k$, we calculated the proportion of stochastic simulations that reached a total number of infected cases within the interval [X, X] by January X, 2020, as estimated by \citet{Imai:2020}. Model simulations and analyses were performed in the R software for statistical computing \citep{R:2018}. Code files are available on GitHub: \url{https://github.com/jriou/wcov}.
 
 Table 1: Parameter ranges for stochastic simulations of outbreak trajectories (POSSIBLY ADD REFS FOR PARAMETER ASSUMPTIONS).
 
@@ -90,14 +87,18 @@ In order to reach between 427 - 4,471 infected cases by January 12, 2020, transm
 - SARS-like transmission underlines potential for pandemic
 - Screening and international efforts crucial at this stage
 
+\cite{Lloyd-Smith:2005,Fraser:2011,Kucharski:2015b}
+
 \section{Acknowledgements}
-SNSF funding for Julien?
+SNSF funding for Julien (ask Matthias)
 
 \section{Conflict of interest}
 None declared.
 
-\section{Authors’ contributions}
+\section{Authors' contributions}
 
-JR and CLA designed the study, carried out the analysis, and wrote the manuscript.
+JR and CLA designed the study, JR performed model simulations, JR and CLA analyzed and interpreted the results and wrote the manuscript.
+
+\bibliography{ncov.bib}
 
 \end{document}
