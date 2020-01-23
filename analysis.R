@@ -77,20 +77,20 @@ hdi(within$k,credMass=.90)
 g1 = ggplot() +
   geom_ribbon(data=pp_sims,aes(R0,ymin=0,ymax=1/(5-.8)),colour="black",fill="grey50",alpha=.5) +
   # geom_density(data=pp_sims,aes(R0),colour="black",fill="grey50",alpha=.5) +
-  geom_density(data=within,aes(R0),fill="lightblue",alpha=.8) +
+  geom_density(data=within,aes(R0),fill="lightblue",alpha=.8,adjust=3) +
   scale_x_continuous(expand=c(0,0),breaks=1:8,limits=c(0.8,5)) +
   scale_y_continuous(expand=c(0,0),limits=c(0,.8)) +
   labs(x=expression(R[0]),y="PDF")
 g2 = ggplot(within) +
   geom_ribbon(aes(k,ymin=0,ymax=.32),fill="grey50",colour="black",alpha=.5) +
   # geom_density(data=pp_sims,aes(k),fill="grey50",colour="black",alpha=.5) +
-  geom_density(aes(k),fill="lightblue",alpha=.8) +
+  geom_density(aes(k),fill="lightblue",alpha=.8,adjust=3) +
   scale_x_continuous(trans="log10",limits=c(0.01,10),expand=c(0,0)) +
   scale_y_continuous(expand=c(0,0),limits=c(0,.8))+
   labs(x="Dispersion parameter, k",y="PDF")
 
 plot_grid(g1,g2,ncol=2)
-ggsave(file="figure/fig2.pdf",height=3,width=6)
+ggsave(file="figure/fig2b.pdf",height=3,width=6)
 
 # plot one combination -------------------------------------------
 chosen = ungroup(tmp) %>%
@@ -135,6 +135,8 @@ t_inc = inc %>%
   group_by(it) %>%
   mutate(total_incidence=max(incidence),
          within=total_incidence>=incidence_range[1]&total_incidence<=incidence_range[2])
+ungroup(t_inc) %>%
+  summarise(mean=mean(within))
 
 g1 = ggplot(t_inc) +
   geom_line(aes(x=day2,y=incidence,group=it,colour=within),alpha=.2) +
