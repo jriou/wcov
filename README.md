@@ -2,7 +2,7 @@
 
 Julien Riou, MD PhD and Christian L. Althaus, PhD
 
-Institute of Social and Preventive Medicine, University of Bern, Switzerland
+*Institute of Social and Preventive Medicine, University of Bern, Switzerland*
 
 julien.riou@ispm.unibe.ch
 
