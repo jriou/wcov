@@ -3,10 +3,9 @@
 
 \usepackage{arxiv}
 
-
 \usepackage[utf8]{inputenc} % allow utf-8 input
 \usepackage[T1]{fontenc}    % use 8-bit T1 fonts
-\usepackage[hidelinks]{hyperref}       % hyperlinks
+\usepackage{hyperref}       % hyperlinks
 \usepackage{url}            % simple URL typesetting
 \usepackage{booktabs}       % professional-quality tables
 \usepackage{amsfonts}       % blackboard math symbols
@@ -52,16 +51,14 @@ Bern, Switzerland \\
 \maketitle
 
 \begin{abstract}
-On December 31, 2019, the World Health Organization was notified about a cluster of pneumonia of unknown aetiology in the city of Wuhan, China. Chinese authorities later identified a new coronavirus (2019-nCoV) as the causative agent of the outbreak. As of January 24, 2020, 897 cases have been confirmed in China and several other countries. Understanding the transmission characteristics and the potential for sustained human-to-human transmission of 2019-nCoV is critically important for coordinating current screening and containment strategies, and determining whether the outbreak constitutes a public health emergency of international concern (PHEIC). We performed stochastic simulations of early outbreak trajectories that are consistent with the epidemiological findings to date. We found the basic reproduction number, $R_0$, to be around 2.2 (90\% high density interval 1.4--3.8), indicating the potential for sustained human-to-human transmission. Transmission characteristics appear to be of similar magnitude to severe acute respiratory syndrome-related coronavirus (SARS-CoV) and the 1918 pandemic influenza. These findings underline the importance of heightened screening, surveillance and control efforts, particularly at airports and other transportation hubs, in order to prevent further international spread of 2019-nCoV.
+On December 31, 2019, the World Health Organization was notified about a cluster of pneumonia of unknown aetiology in the city of Wuhan, China. Chinese authorities later identified a new coronavirus (2019-nCoV) as the causative agent of the outbreak. As of January 23, 2020, 655 cases have been confirmed in China and several other countries. Understanding the transmission characteristics and the potential for sustained human-to-human transmission of 2019-nCoV is critically important for coordinating current screening and containment strategies, and determining whether the outbreak constitutes a public health emergency of international concern (PHEIC). We performed stochastic simulations of early outbreak trajectories that are consistent with the epidemiological findings to date. We found the basic reproduction number, $R_0$, to be around 2.2 (90\% high density interval 1.4--3.8), indicating the potential for sustained human-to-human transmission. Transmission characteristics appear to be of a similar magnitude to severe acute respiratory syndrome-related coronavirus (SARS-CoV) and the 1918 pandemic influenza. These findings underline the importance of heightened screening, surveillance and control efforts, particularly at airports and other travel hubs, in order to prevent further international spread of 2019-nCoV.
 \end{abstract}
 
 \section*{Introduction}
 
-On December 31, 2019, the World Health Organization (WHO) was alerted about a cluster of pneumonia of unknown aetiology in the city of Wuhan, China \cite{who1}. Only a few days later, Chinese authorities identified and characterised a novel coronavirus (2019-nCoV) as the causative agent of the outbreak \cite{Shi:2020}. The outbreak apparently started from a single or multiple zoonotic transmission events at a wet market in Wuhan, and has since resulted in 897 confirmed cases in China and several other countries by January 24, 2020 \cite{wiki}. 
-Based on the number of exported cases, the actual size of the epidemic in Wuhan has been estimated to be in the range [1,000--9,700].\cite{Imai:2020}
-At this early stage of the outbreak, it is critically important to gain a better understanding of the transmission pattern and the potential for sustained human-to-human transmission of 2019-nCoV. Information on the transmission characteristics will help coordinate current screening and containment strategies, support decision making on whether the outbreak constitutes a public health emergency of international concern (PHEIC), and is key for anticipating the risk of pandemic spread of 2019-nCoV.
+On December 31, 2019, the World Health Organization (WHO) was alerted about a cluster of pneumonia of unknown aetiology in the city of Wuhan, China\cite{who1}. Only a few days later, Chinese authorities identified and characterised a novel coronavirus (2019-nCoV) as the causative agent of the outbreak \cite{Shi:2020}. The outbreak apparently started from a single or multiple zoonotic transmission events at a wet market in Wuhan, and has since resulted in 655 confirmed cases in China and several other countries by January 23, 2020 \cite{wiki}. At this early stage of the outbreak, it is critically important to gain a better understanding of the transmission pattern and the potential for sustained human-to-human transmission of 2019-nCoV. Information on the transmission characteristics will help coordinate current screening and containment strategies, support decision making on whether the outbreak constitutes a public health emergency of international concern (PHEIC), and is necessary for anticipating the risk of pandemic spread of 2019-nCoV.
 
-Two key properties will determine further spread of 2019-nCoV. First, the basic reproduction number $R_0$ describes the average number of secondary cases generated by an infectious index case during the early phase of the outbreak. If $R_0$ is above the critical threshold of 1, continuous human-to-human transmission with sustained transmission chains will occur. Second, the individual variation in the number of secondary cases provides further information about the expected outbreak dynamics and the potential for superspreading events \cite{Lloyd-Smith:2005,Althaus:2015b,Kucharski:2015b}. In particular, this latter property will determine whether exported cases are more likely to cause large infection clusters or rather establish new sustained transmission chains in other countries \cite{Lloyd-Smith:2005}.
+Two key properties will determine further spread of 2019-nCoV. First, the basic reproduction number $R_0$ describes the average number of secondary cases generated by an infectious index case during the early phase of the outbreak. If$R_0$ is above the critical threshold of 1, continuous human-to-human transmission with sustained transmission chains will occur. Second, the individual variation in the number of secondary cases provides further information about the early outbreak dynamics and the expected number of superspreading events \cite{Lloyd-Smith:2005,Althaus:2015b,Kucharski:2015b}.
 
 In order to better understand the early transmission pattern of 2019-nCoV, we performed stochastic simulations of early outbreak trajectories that are consistent with the epidemiological findings to date.
 %
@@ -75,7 +72,7 @@ In order to better understand the early transmission pattern of 2019-nCoV, we pe
 
 \section*{Methods}
 We performed stochastic simulations of the first few generations of human-to-human transmission of 2019-nCoV. 
-Simulations were initialised with one index case.
+Simulations were initialized with one index case.
 For each primary case, we generated secondary cases according to a negative-binomial offspring distribution with mean $R_0$ and dispersion $k$ \cite{Lloyd-Smith:2005,Althaus:2015b}.
 The dispersion parameter $k$ can be interpreted as a measure of the probability of superspreading events (the lower the value of $k$, the higher the probability of superspreading).
 The generation time interval $D$ was assumed to be gamma-distributed with a shape parameter of 2, and a mean that varied between 7 and 14 days.
@@ -102,7 +99,7 @@ Code files are available on \url{https://github.com/jriou/wcov}.
 	\hline 
 	$R_0$& Basic reproduction number  &[0.8 -- 5.0] \\ 
 	$k$ & Dispersion parameter & [0.01 -- 10] \\
-	$D$ & Generation time interval (days)	 & [7 -- 14]  \\
+	$D$ & Generation time interval & [7 -- 14]  \\
 	$n$ & Initial number of index cases & [1 -- 50]  \\
 	$T$ & Date of zoonotic transmission & [20 Nov 2019 -- 4 Dec 2019] \\
 	
@@ -112,40 +109,39 @@ Code files are available on \url{https://github.com/jriou/wcov}.
 
 \begin{figure}[b]
 	\centering
-	\includegraphics[width=.6\linewidth]{../figure/fig_post.png}
+	\includegraphics[width=.6\linewidth]{../figure/fig2b.pdf}
 	\caption{Values of $R_0$ and $k$ most compatible with epidemic data available on 2019-nCoV as of January 23, 2020 (in blue). The basic reproduction number $R_0$ quantifies human-to-human transmission. The dispersion parameter $k$ quantifies the risk of a superspreading event (lower values of $k$ are linked to a higher probability of superspreading).}
-	\label{fig:fig_post}
+	\label{fig:fig2}
 \end{figure}
 
 
 \section*{Results}
-In order to reach between 1,000 and 9,700 infected cases by January 18, 2020, the early human-to-human transmission of 2019-nCoV is characterised by values of $R_0$ around around 2.2 (90\% high density interval 1.4--3.8) (figure \ref{fig:fig_post}).
+In order to reach between 1,000 and 9,700 infected cases by January 18, 2020, the early human-to-human transmission of 2019-nCoV are characterized by values of $R_0$ around around 2.2 (90\% high density interval 1.4--3.8) (figure \ref{fig:fig2}).
 The observed data at this point is compatible with a large range of values for the dispersion parameter $k$ (median 0.54, 90\% high density interval 0.014--6.95).
-However, our simulations suggest that very low values of $k$, corresponding to very high probabilities of superspreading events, are less likely.
-These estimates incorporate the uncertainty on the current total epidemic size (as of January 23, 2020) and on the date and scale of the initial zoonotic event (figure \ref{fig:fig_traj}).
+However, our simulations suggest that very low values of $k$, corresponding to a large probability of superspreading events, are less likely.
+These estimates incorporate the uncertainty on the current total epidemic size (as of January 23, 2020) and on the date and scale of the initial zoonotic event (figure \ref{fig:fig3}).
 
 
 Comparison with other emerging viruses in the past allows to put in perspective the available information regarding the transmission patterns of 2019-nCoV.
-Figure \ref{fig:fig_comb} shows the combinations of $R_0$ and $k$ that are most likely to result in an epidemic size in the range [1,000--9,700] 
-Our estimates of $R_0$ and $k$ are more similar to previous estimates focusing on early human-to-human transmission of SARS-CoV in Beijing and Singapore \cite{Lloyd-Smith:2005} than of MERS-CoV \cite{Kucharski:2015b}.
+Our estimates of $R_0$ and $k$ are more similar to previous estimates focusing on early human-to-human transmission of SARS-CoV in Beijing and Singapore\cite{Lloyd-Smith:2005} than of MERS-CoV\cite{Kucharski:2015b} (figure \ref{fig:fig1}).
 Our estimates for 2019-nCoV are also in line with those of 1918 pandemic influenza \cite{Fraser:2011}.
 
 
 
 \begin{figure}[t]
 	\centering
-	\includegraphics[width=.95\linewidth]{../figure/fig_traj.png}
-	\caption{Illustration of the simulation strategy. The lines represent the cumulative incidence of 480 simulations with $R_0=1.8$ and $k=1.13$. The other parameters are left to vary according to table 1. Among these simulated epidemics, 54.3\% led to a cumulative incidence between 1,000 and 9,700 on January 18, 2020 (in red, as in figure \ref{fig:fig_comb}).}
-	\label{fig:fig_traj}
+	\includegraphics[width=.9\linewidth]{../figure/fig3b.pdf}
+	\caption{Illustration of the simulation strategy. The lines represent the cumulative incidence of 100 simulations with $R_0=1.8$ and $k=1.13$. The other parameters are left to vary according to table 1. Among these simulated epidemics, 54.3\% led to a cumulative incidence between 1000 and 9700 on January 18, 2020 (in red, as in figure \ref{fig:fig1}).}
+	\label{fig:fig3}
 \end{figure}
 
 
 \begin{figure}[t]
 	\centering
-	\includegraphics[width=.95\linewidth]{../figure/fig_comb.png}
-	\caption{Proportion of simulated epidemics that lead to a cumulative incidence between 1,000 and 9,700 on January 18, 2020. This can be interpreted as the combinations of $R_0$ and $k$ values most compatible with epidemic data available on 2019-nCoV as of January 23, 2020. As a comparison, we show the estimates of $R_0$ and $k$ for the early human-to-human transmission of SARS-CoV in Singapore and Beijing, and of 1918 pandemic influenza \cite{Lloyd-Smith:2005,Fraser:2011,Kucharski:2015b}.
+	\includegraphics[width=.9\linewidth]{../figure/fig1.pdf}
+	\caption{Proportion of simulated epidemics that lead to a cumulative incidence between 1000 and 9700 on January 18, 2020. This can be interpreted as the combinations of $R_0$ and $k$ values most compatible with epidemic data available on 2019-nCoV as of January 23, 2020. As a comparison, we show the estimates of $R_0$ and $k$ for the early human-to-human transmission of SARS-CoV in Singapore and Beijing, and of 1918 pandemic influenza \cite{Lloyd-Smith:2005,Fraser:2011,Kucharski:2015b}.
 	}
-	\label{fig:fig_comb}
+	\label{fig:fig1}
 \end{figure}
 
 
@@ -171,8 +167,8 @@ Third, our simulations are also consistent with lower levels of superspreading t
 
 % technical summary
 Our analysis, while limited due to the scarcity of data, has two important strengths.
-First, it is based on the simulation of a wide range of possibilities regarding epidemic parameters and allows for the full propagation on the final estimates of the many remaining uncertainties regarding 2019-nCoV and the situation in Wuhan: on the actual size of the epidemic (estimated from the number of exported cases as actual surveillance counts are likely underestimations), on the size of the initial zoonotic event at the wet market, on the date(s) of the initial animal-to-human transmission event(s) and on the generation time interval.
-As it accounts for all these uncertainties, our analysis provides a reliable summary of the current state of knowledge about the human-to-human transmissibility of 2019-nCoV.
+First, it is based on the simulation of a wide range of possibilities regarding epidemic parameters and allows for the full propagation of the many remaining uncertainties regarding 2019-nCoV and the situation in Wuhan: the size of the initial zoonotic event at the wet market, the date(s) of the initial animal-to-human transmission event(s) and the generation time interval.
+While accounting for all these uncertainties, our analysis provides a reliable summary of the current state of knowledge about the human-to-human transmissibility of 2019-nCoV.
 Second, its focus on the possibility of superspreading events by using negative-binomial offspring distributions is very important in the context of emerging coronaviruses \cite{Lloyd-Smith:2005,Althaus:2015b}.
 While our estimate of $k$ remains very imprecise, the simulations suggest that very low values of $k$ ($< 0.1$) are less likely than higher values ($> 1$) that correspond to a more homogeneous transmission pattern.
 However, values of $k$ in the range of 0.1--0.2 are still compatible with the occurrence of large superspreading events, especially in hospital settings \cite{oh2015middle,assiri2013hospital}.
@@ -180,9 +176,9 @@ However, values of $k$ in the range of 0.1--0.2 are still compatible with the oc
 % conclusion
 Our analysis suggests that the early pattern of human-to-human transmission 2019-nCoV is reminiscent of SARS-CoV emergence in 2002.
 International collaboration and coordination will be crucial in order to contain the spread of 2019-nCoV.
-At this stage, particular attention should be given on the prevention of superspreading events, while the rapid establishment of sustained transmission chains from single cases cannot be ruled out.
+At this stage, particular attention should should be given on the prevention of superspreading events, while the rapid establishment of sustained transmission chains from single cases cannot be ruled out.
 The previous experience with SARS-CoV has shown that established practices of infection control can stop such an epidemic.
-Given the existing uncertainty around the case fatality rate, our findings highlight the importance of heightened screening, surveillance and control efforts, particularly at airports and other transportation hubs, in order to prevent further international spread of 2019-nCoV.
+Given the uncertainty around the case fatality rate, our findings highlight the importance of heightened screening, surveillance and control efforts, particularly at airports and other travel hubs, in order to prevent further international spread of 2019-nCoV.
 
 
 
@@ -193,7 +189,7 @@ None.
 
 \section*{Authors' contributions}
 
-JR and CLA designed the study, JR performed model simulations, JR and CLA analysed and interpreted the results and wrote the manuscript.
+JR and CLA designed the study, JR performed model simulations, JR and CLA analyzed and interpreted the results and wrote the manuscript.
 
 \bibliography{ncov.bib}
 \bibliographystyle{unsrt}  
