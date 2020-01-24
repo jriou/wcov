@@ -1,10 +1,9 @@
 # Pattern of early human-to-human transmission of Wuhan 2019-nCoV
 
-Julien Riou, MD PhD and Christian L. Althaus, PhD
+Julien Riou, MD PhD (julien.riou@ispm.unibe.ch) and Christian L. Althaus, PhD (christian.althaus@alumni.ethz.ch)
 
 *Institute of Social and Preventive Medicine, University of Bern, Switzerland*
 
-julien.riou@ispm.unibe.ch
 
 **Abstract.** On December 31, 2019, the World Health Organization was notified about a cluster of pneumonia of unknown aetiology in the city of Wuhan, China. Chinese authorities later identified a new coronavirus (2019-nCoV) as the causative agent of the outbreak. As of January 24, 2020, 897 cases have been confirmed in China and several other countries. Understanding the transmission characteristics and the potential for sustained human-to-human transmission of 2019-nCoV is critically important for coordinating current screening and containment strategies, and determining whether the outbreak constitutes a public health emergency of international concern (PHEIC). We performed stochastic simulations of early outbreak trajectories that are consistent with the epidemiological findings to date. We found the basic reproduction number, R_0, to be around 2.2 (90% high density interval 1.4--3.8), indicating the potential for sustained human-to-human transmission. Transmission characteristics appear to be of similar magnitude to severe acute respiratory syndrome-related coronavirus (SARS-CoV) and the 1918 pandemic influenza. These findings underline the importance of heightened screening, surveillance and control efforts, particularly at airports and other transportation hubs, in order to prevent further international spread of 2019-nCoV.
 
