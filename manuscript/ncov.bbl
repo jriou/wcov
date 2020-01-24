@@ -21,6 +21,14 @@ Wikipedia.
 \newblock
   \url{https://en.wikipedia.org/wiki/2019–20_outbreak_of_novel_coronavirus_2019-nCoV}.
 
+\bibitem{Imai:2020}
+Natsuko Imai, Ilaria Dorigatti, Anne Cori, Christl Donnelly, Steven Riley, and
+  Neil~M. Ferguson.
+\newblock {Report 2: Estimating the potential total number of novel Coronavirus
+  cases in Wuhan City, China}.
+\newblock
+  \url{https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/news--wuhan-coronavirus/}.
+
 \bibitem{Lloyd-Smith:2005}
 J~O Lloyd-Smith, S~J Schreiber, P~E Kopp, and W~M Getz.
 \newblock {Superspreading and the effect of individual variation on disease
@@ -44,14 +52,6 @@ Andrew Rambaut.
   2020-01-19}.
 \newblock
   \url{http://virological.org/t/preliminary-phylogenetic-analysis-of-11-ncov2019-genomes-2020-01-19/329}.
-
-\bibitem{Imai:2020}
-Natsuko Imai, Ilaria Dorigatti, Anne Cori, Christl Donnelly, Steven Riley, and
-  Neil~M. Ferguson.
-\newblock {Report 2: Estimating the potential total number of novel Coronavirus
-  cases in Wuhan City, China}.
-\newblock
-  \url{https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/news--wuhan-coronavirus/}.
 
 \bibitem{R:2018}
 {R Core Team}.
