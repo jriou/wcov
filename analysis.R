@@ -65,7 +65,7 @@ ggsave(file="figure/fig1.pdf",height=6,width=9)
 
 
 # ABC ------------------------------------------------------------
-within = filter(sample_pp_sims,within_range==TRUE)
+within = filter(pp_sims,within_range==TRUE)
 
 library(HDInterval)
 summary(within$R0)
