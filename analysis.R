@@ -18,7 +18,8 @@ set_seeds = c(1,10,20,30,40,50)
 # load post-processed data ------------------------------------------------------------
 load("wcoc_ppsims_2020-01-23.Rdata")
 pp_sims = pp_allsims %>%
-  mutate(within_range=total_incidence>=incidence_range[1]&total_incidence<=incidence_range[2])
+  mutate(within_range=total_incidence>=incidence_range[1]&total_incidence<=incidence_range[2]) %>%
+  tbl_df()
 
 # fig1: k ~ R0 -----------------------------------------------
 
@@ -33,7 +34,7 @@ names(other_diseases)=c("virus","label","R0","R0_min","R0_max","k","k_min","k_ma
 for(i in 3:10) other_diseases[,i] = as.numeric(as.character(other_diseases[,i]))
 
 # summarise samples
-tmp = pp_sims %>%
+tmp = sample_pp_simes %>%
   group_by(R0,k) %>%
   summarise(within_range=mean(within_range))
   
@@ -62,7 +63,9 @@ ggplot(tmp) +
         legend.key.height = unit(60,"pt"))
 ggsave(file="figure/fig1.pdf",height=6,width=9)
 
-
+sample_pp_sims = filter(pp_sims,n %in% 11:20) %>%
+  mutate(n=n-10)
+write.csv(sample_pp_sims,file="sample_simulations.csv")
 # ABC ------------------------------------------------------------
 within = filter(pp_sims,within_range==TRUE)
 
@@ -72,8 +75,13 @@ hdi(within$R0,credMass=.90)
 summary(within$k)
 hdi(within$k,credMass=.90)
 
+within$doubling_time = within$sigma * log(2) / within$R0
+summary(within$doubling_time)
+hdi(within$doubling_time,credMass=.90)
+
 plot(density(within$sigma,adjust=3))
 plot(density(within$seed,adjust=3))
+
 
 
 g1 = ggplot() +
@@ -82,17 +90,17 @@ g1 = ggplot() +
   geom_density(data=within,aes(R0),fill="lightblue",alpha=.8,adjust=3) +
   scale_x_continuous(expand=c(0,0),breaks=1:8,limits=c(0.8,5)) +
   scale_y_continuous(expand=c(0,0),limits=c(0,.8)) +
-  labs(x=expression(R[0]),y="PDF")
+  labs(x=expression(R[0]),y="density")
 g2 = ggplot(within) +
-  geom_ribbon(aes(k,ymin=0,ymax=.32),fill="grey50",colour="black",alpha=.5) +
+  geom_ribbon(aes(k,ymin=0,ymax=1/3),fill="grey50",colour="black",alpha=.5) +
   # geom_density(data=pp_sims,aes(k),fill="grey50",colour="black",alpha=.5) +
   geom_density(aes(k),fill="lightblue",alpha=.8,adjust=3) +
   scale_x_continuous(trans="log10",limits=c(0.01,10),expand=c(0,0)) +
   scale_y_continuous(expand=c(0,0),limits=c(0,.8))+
-  labs(x="Dispersion parameter, k",y="PDF")
+  labs(x="Dispersion parameter, k",y="density")
 
 plot_grid(g1,g2,ncol=2)
-ggsave(file="figure/fig2b.pdf",height=3,width=6)
+ggsave(file="figure/fig2c.pdf",height=3,width=6)
 
 # plot one combination -------------------------------------------
 chosen = ungroup(tmp) %>%
