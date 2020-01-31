@@ -73,9 +73,6 @@ hdi(within$R0,credMass=.90)
 summary(within$k)
 hdi(within$k,credMass=.90)
 
-within$doubling_time = within$sigma * log(2) / within$R0
-summary(within$doubling_time)
-hdi(within$doubling_time,credMass=.90)
 
 plot(density(within$sigma,adjust=3))
 plot(density(within$seed,adjust=3))
