@@ -34,7 +34,7 @@ names(other_diseases)=c("virus","label","R0","R0_min","R0_max","k","k_min","k_ma
 for(i in 3:10) other_diseases[,i] = as.numeric(as.character(other_diseases[,i]))
 
 # summarise samples
-tmp = sample_pp_simes %>%
+tmp = pp_simes %>%
   group_by(R0,k) %>%
   summarise(within_range=mean(within_range))
   
