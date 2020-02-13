@@ -1,109 +1,92 @@
 \begin{thebibliography}{10}
 
 \bibitem{who1}
-{Pneumonia of unknown cause – China}.
-\newblock
+``{World Health Organization (WHO). Pneumonia of unknown cause – China}.''
   \url{https://www.who.int/csr/don/05-january-2020-pneumonia-of-unkown-cause-china/en/}.
 
-\bibitem{Shi:2020}
-Zheng-Li Shi, Peng Zhou, Xing-Lou Yang, Xian-Guang Wang, Ben Hu, Lei Zhang, Wei
-  Zhang, Hao-Rui Si, Yan Zhu, Bei Li, Chao-Lin Huang, Hui-Dong Chen, Jing Chen,
-  Yun Luo, Hua Guo, Ren-Di Jiang, Mei-Qin Liu, Ying Chen, Xu-Rui Shen, Xi~Wang,
-  Xiao-Shuang Zheng, Kai Zhao, Quan-Jiao Chen, Fei Deng, Lin-Lin Liu, Bing Yan,
-  Fa-Xian Zhan, Yan-Yi Wang, and Gengfu Xiao.
-\newblock Discovery of a novel coronavirus associated with the recent pneumonia
-  outbreak in humans and its potential bat origin.
-\newblock {\em bioRxiv}, 2020.
+\bibitem{huang2020clinical}
+C.~Huang, Y.~Wang, X.~Li, L.~Ren, J.~Zhao, Y.~Hu, L.~Zhang, G.~Fan, J.~Xu,
+  X.~Gu, {\em et~al.}, ``Clinical features of patients infected with 2019 novel
+  coronavirus in wuhan, china,'' {\em The Lancet}, 2020.
 
-\bibitem{wiki}
-Wikipedia.
-\newblock {2019–20 outbreak of novel coronavirus 2019-nCoV}.
-\newblock
-  \url{https://en.wikipedia.org/wiki/2019–20_outbreak_of_novel_coronavirus_2019-nCoV}.
+\bibitem{Shi:2020}
+Z.-L. Shi, P.~Zhou, X.-L. Yang, X.-G. Wang, B.~Hu, L.~Zhang, W.~Zhang, H.-R.
+  Si, Y.~Zhu, B.~Li, C.-L. Huang, H.-D. Chen, J.~Chen, Y.~Luo, H.~Guo, R.-D.
+  Jiang, M.-Q. Liu, Y.~Chen, X.-R. Shen, X.~Wang, X.-S. Zheng, K.~Zhao, Q.-J.
+  Chen, F.~Deng, L.-L. Liu, B.~Yan, F.-X. Zhan, Y.-Y. Wang, and G.~Xiao,
+  ``Discovery of a novel coronavirus associated with the recent pneumonia
+  outbreak in humans and its potential bat origin,'' {\em bioRxiv}, 2020.
+
+\bibitem{chan2020familial}
+J.~F.-W. Chan, S.~Yuan, K.-H. Kok, K.~K.-W. To, H.~Chu, J.~Yang, F.~Xing,
+  J.~Liu, C.~C.-Y. Yip, R.~W.-S. Poon, {\em et~al.}, ``A familial cluster of
+  pneumonia associated with the 2019 novel coronavirus indicating
+  person-to-person transmission: a study of a family cluster,'' {\em The
+  Lancet}, 2020.
+
+\bibitem{who2}
+``{World Health Organization (WHO). Novel Coronavirus (2019-nCoV) situation
+  report 9. Geneva: WHO; 2020}.'' \url{https://www.who.int/docs/default-source/
+  coronaviruse/situation-reports/20200129-sitrep-9-ncov-v2.
+  pdf?sfvrsn=e2c8915_2}.
 
 \bibitem{Imai:2020}
-Natsuko Imai, Ilaria Dorigatti, Anne Cori, Christl Donnelly, Steven Riley, and
-  Neil~M. Ferguson.
-\newblock {Report 2: Estimating the potential total number of novel Coronavirus
-  cases in Wuhan City, China}.
-\newblock
+N.~Imai, I.~Dorigatti, A.~Cori, C.~Donnelly, S.~Riley, and N.~M. Ferguson,
+  ``{Report 2: Estimating the potential total number of novel Coronavirus cases
+  in Wuhan City, China}.''
   \url{https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/news--wuhan-coronavirus/}.
 
 \bibitem{Lloyd-Smith:2005}
-J~O Lloyd-Smith, S~J Schreiber, P~E Kopp, and W~M Getz.
-\newblock {Superspreading and the effect of individual variation on disease
-  emergence}.
-\newblock {\em Nature}, 438(7066):355--9, Nov 2005.
+J.~O. Lloyd-Smith, S.~J. Schreiber, P.~E. Kopp, and W.~M. Getz,
+  ``{Superspreading and the effect of individual variation on disease
+  emergence},'' {\em Nature}, vol.~438, pp.~355--9, Nov 2005.
 
 \bibitem{Althaus:2015b}
-Christian~L Althaus.
-\newblock {Ebola superspreading}.
-\newblock {\em Lancet Infect Dis}, 15(5):507--508, 2015.
+C.~L. Althaus, ``{Ebola superspreading},'' {\em Lancet Infect Dis}, vol.~15,
+  no.~5, pp.~507--508, 2015.
 
 \bibitem{Kucharski:2015b}
-A~J Kucharski and C~L Althaus.
-\newblock {The role of superspreading in Middle East respiratory syndrome
-  coronavirus (MERS-CoV) transmission}.
-\newblock {\em Euro Surveill}, 20(25):14--8, Jun 2015.
+A.~J. Kucharski and C.~L. Althaus, ``{The role of superspreading in Middle East
+  respiratory syndrome coronavirus (MERS-CoV) transmission},'' {\em Euro
+  Surveill}, vol.~20, pp.~14--8, Jun 2015.
 
 \bibitem{Rambaut:2020}
-Andrew Rambaut.
-\newblock {Preliminary phylogenetic analysis of 11 nCoV2019 genomes,
-  2020-01-19}.
-\newblock
+A.~Rambaut, ``{Preliminary phylogenetic analysis of 11 nCoV2019 genomes,
+  2020-01-19}.''
   \url{http://virological.org/t/preliminary-phylogenetic-analysis-of-11-ncov2019-genomes-2020-01-19/329}.
 
 \bibitem{R:2018}
-{R Core Team}.
-\newblock {\em {R: {A} {L}anguage and {E}nvironment for {S}tatistical
+{R Core Team}, {\em {R: {A} {L}anguage and {E}nvironment for {S}tatistical
   {C}omputing}}.
 \newblock R Foundation for Statistical Computing, Vienna, Austria, 2018.
 
+\bibitem{breban2013interhuman}
+R.~Breban, J.~Riou, and A.~Fontanet, ``Interhuman transmissibility of middle
+  east respiratory syndrome coronavirus: estimation of pandemic risk,'' {\em
+  The Lancet}, vol.~382, no.~9893, pp.~694--699, 2013.
+
+\bibitem{cowling2008effectiveness}
+B.~Cowling, L.~Ho, and G.~Leung, ``Effectiveness of control measures during the
+  sars epidemic in beijing: a comparison of the r t curve and the epidemic
+  curve,'' {\em Epidemiology \& Infection}, vol.~136, no.~4, pp.~562--566,
+  2008.
+
 \bibitem{Fraser:2011}
-Christophe Fraser, Derek A~T Cummings, Don Klinkenberg, Donald~S Burke, and
-  Neil~M Ferguson.
-\newblock {Influenza transmission in households during the 1918 pandemic}.
-\newblock {\em Am J Epidemiol}, 174(5):505--14, Sep 2011.
-
-\bibitem{whoreco}
-{WHO panel puts off decision on whether to sound alarm on rapid spread of new
-  virus.}
-\newblock
-  \url{https://www.sciencemag.org/news/2020/01/who-panel-puts-decision-whether-sound-alarm-rapid-spread-new-virus}.
-\newblock Accessed: 2020-01-23.
-
-\bibitem{Chen2020.01.19.911669}
-Tianmu Chen, Jia Rui, Qiupeng Wang, Zeyu Zhao, Jing-An Cui, and Ling Yin.
-\newblock A mathematical model for simulating the transmission of wuhan novel
-  coronavirus.
-\newblock {\em bioRxiv}, 2020.
-
-\bibitem{vespi:2020}
-M.~Chinazzi, J.~T. Davis, A.~Pastore y~Piontti, X.~Xiong, A.~Vespignani,
-  C.~Gioannini, M.~Litvinova, L.~Rossi, M.E. Halloran, and I.M.~Longini Jr.
-\newblock {Preliminary assessment of the international spreading risk
-  associated with the 2019 nCOV outbreak in Wuhan city}.
-\newblock \url{https://www.mobs-lab.org/2019ncov.html}.
-
-\bibitem{peng2020real}
-Peng Wu, Xinxin Hao, Eric H~Y Lau, Jessica~Y Wong, Kathy S~M Leung, Joseph~T
-  Wu, Benjamin~J Cowling, and Gabriel~M Leung.
-\newblock Real-time tentative assessment of the epidemiological characteristics
-  of novel coronavirus infections in wuhan, china, as at 22 january 2020.
-\newblock {\em Eurosurveillance}, 25(3), 2020.
+C.~Fraser, D.~A.~T. Cummings, D.~Klinkenberg, D.~S. Burke, and N.~M. Ferguson,
+  ``{Influenza transmission in households during the 1918 pandemic},'' {\em Am
+  J Epidemiol}, vol.~174, pp.~505--14, Sep 2011.
 
 \bibitem{oh2015middle}
-Myoung-don Oh, Pyoeng~Gyun Choe, Hong~Sang Oh, Wan~Beom Park, Sang-Min Lee,
-  Jinkyeong Park, Sang~Kook Lee, Jeong-Sup Song, and Nam~Joong Kim.
-\newblock Middle east respiratory syndrome coronavirus superspreading event
-  involving 81 persons, korea 2015.
-\newblock {\em Journal of Korean Medical Science}, 30(11):1701--1705, 2015.
+M.-d. Oh, P.~G. Choe, H.~S. Oh, W.~B. Park, S.-M. Lee, J.~Park, S.~K. Lee,
+  J.-S. Song, and N.~J. Kim, ``Middle east respiratory syndrome coronavirus
+  superspreading event involving 81 persons, korea 2015,'' {\em Journal of
+  Korean Medical Science}, vol.~30, no.~11, pp.~1701--1705, 2015.
 
 \bibitem{assiri2013hospital}
-Abdullah Assiri, Allison McGeer, Trish~M Perl, Connie~S Price, Abdullah~A
-  Al~Rabeeah, Derek~AT Cummings, Zaki~N Alabdullatif, Maher Assad, Abdulmohsen
-  Almulhim, Hatem Makhdoom, et~al.
-\newblock Hospital outbreak of middle east respiratory syndrome coronavirus.
-\newblock {\em New England Journal of Medicine}, 369(5):407--416, 2013.
+A.~Assiri, A.~McGeer, T.~M. Perl, C.~S. Price, A.~A. Al~Rabeeah, D.~A.
+  Cummings, Z.~N. Alabdullatif, M.~Assad, A.~Almulhim, H.~Makhdoom, {\em
+  et~al.}, ``Hospital outbreak of middle east respiratory syndrome
+  coronavirus,'' {\em New England Journal of Medicine}, vol.~369, no.~5,
+  pp.~407--416, 2013.
 
 \end{thebibliography}

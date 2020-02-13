@@ -17,3 +17,4 @@ As a comparison, we show the estimates of R_0 and k for the
 early human-to-human transmission of SARS-CoV in Singapore and 
 Beijing, and of 1918 pandemic influenza (Lloyd-Smith et al., 2005; 
 Fraser et al., 2011; Kucharski et al., 2015).
+

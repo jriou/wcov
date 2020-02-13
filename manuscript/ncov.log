@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.7.9)  24 JAN 2020 11:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.7.9)  13 FEB 2020 12:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -991,21 +991,21 @@ Package: appendix 2009/09/02 v1.2b extra appendix facilities
 ) (./ncov.aux)
 \openout1 = `ncov.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 51.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 53.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -1077,7 +1077,7 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box42
-Package hyperref Info: Link coloring OFF on input line 51.
+Package hyperref Info: Link coloring OFF on input line 53.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -1086,15 +1086,15 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count148
 )
-LaTeX Info: Redefining \ref on input line 51.
-LaTeX Info: Redefining \pageref on input line 51.
-LaTeX Info: Redefining \nameref on input line 51.
+LaTeX Info: Redefining \ref on input line 53.
+LaTeX Info: Redefining \pageref on input line 53.
+LaTeX Info: Redefining \nameref on input line 53.
 
 (./ncov.out) (./ncov.out)
 \@outlinefile=\write4
 \openout4 = `ncov.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 51.
+LaTeX Info: Redefining \microtypecontext on input line 53.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1143,7 +1143,7 @@ e
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 53.
+LaTeX Font Info:    Try loading font information for U+msa on input line 56.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1151,7 +1151,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 53.
+LaTeX Font Info:    Try loading font information for U+msb on input line 56.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1160,8 +1160,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 53.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 53.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 56.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 56.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -1171,119 +1171,103 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 54.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 57.
 LaTeX Font Info:    Font shape `T1/ptm/bx/sc' in size <12> not available
-(Font)              Font shape `T1/ptm/b/sc' tried instead on input line 54.
+(Font)              Font shape `T1/ptm/b/sc' tried instead on input line 57.
 
-Underfull \vbox (badness 3291) has occurred while \output is active []
+Underfull \vbox (badness 1478) has occurred while \output is active []
 
  [1
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<../figure/fig_post.png, id=41, 3613.5pt x 1806.75pt>
+Underfull \hbox (badness 5637) in paragraph at lines 82--83
+[]|\T1/ptm/m/n/10 (+20) Number of val-ues ex-plored
+ []
+
+<../figure/fig_post.png, id=43, 3613.5pt x 1806.75pt>
 File: ../figure/fig_post.png Graphic file (type png)
 <use ../figure/fig_post.png>
-Package pdftex.def Info: ../figure/fig_post.png  used on input line 115.
+Package pdftex.def Info: ../figure/fig_post.png  used on input line 97.
 (pdftex.def)             Requested size: 271.01524pt x 135.5004pt.
- [2pdfTeX warning (ext4): destination with the same identifier (name{table.1}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.132 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-1}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.132 
-       <../figure/fig_post.png>]
-<../figure/fig_traj.png, id=60, 5420.25pt x 3613.5pt>
+<../figure/fig_traj.png, id=44, 5420.25pt x 3613.5pt>
 File: ../figure/fig_traj.png Graphic file (type png)
 <use ../figure/fig_traj.png>
-Package pdftex.def Info: ../figure/fig_traj.png  used on input line 137.
+Package pdftex.def Info: ../figure/fig_traj.png  used on input line 110.
 (pdftex.def)             Requested size: 429.10175pt x 286.05334pt.
-<../figure/fig_comb.png, id=64, 5420.25pt x 3613.5pt>
+[2pdfTeX warning (ext4): destination with the same identifier (name{table.1}) h
+as been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.114 \end{figure}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{figure.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.114 \end{figure}
+                   <../figure/fig_post.png>]
+<../figure/fig_comb.png, id=63, 5420.25pt x 3613.5pt>
 File: ../figure/fig_comb.png Graphic file (type png)
 <use ../figure/fig_comb.png>
-Package pdftex.def Info: ../figure/fig_comb.png  used on input line 145.
+Package pdftex.def Info: ../figure/fig_comb.png  used on input line 124.
 (pdftex.def)             Requested size: 429.10175pt x 286.05334pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [3pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.171 
+l.134 
        <../figure/fig_traj.png>]
-Underfull \vbox (badness 3323) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.194 \section
-              *{Authors' contributions} <../figure/fig_comb.png>] (./ncov.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 4--7
-[]\T1/ptm/m/n/10 (+20) Pneumonia of un-known cause ^^U China.  []$\T1/cmtt/m/n/
-10 https : / / www . who . int / csr / don /
- []
-
-
-Overfull \hbox (24.55pt too wide) in paragraph at lines 50--55
+l.140 
+       <../figure/fig_comb.png>] (./ncov.bbl
+Overfull \hbox (24.55pt too wide) in paragraph at lines 54--57
 \T1/cmtt/m/n/10 virological . org / t / preliminary-[]phylogenetic-[]analysis-[
 ]of-[]11-[]ncov2019-[]genomes-[]2020-[]01-[]19 /
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--74
-[]\T1/ptm/m/n/10 (+20) WHO panel puts off de-ci-sion on whether to sound alarm 
-on rapid
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--74
-\T1/ptm/m/n/10 (+20) spread of new virus.  []$\T1/cmtt/m/n/10 https : / / www .
- sciencemag . org / news / 2020 / 01 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--74
-\T1/cmtt/m/n/10 who-[]panel-[]puts-[]decision-[]whether-[]sound-[]alarm-[]rapid
--[]spread-[]new-[]virus$[]\T1/ptm/m/n/10 (+20) .  Ac-cessed:
- []
-
-) [5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 200.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 200.
+[5]) [6]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 153.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 153.
  (./ncov.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 200.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 200.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 153.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 153.
 Package rerunfilecheck Info: File `ncov.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 200.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 153.
  ) 
 Here is how much of TeX's memory you used:
- 19490 strings out of 492982
- 355158 string characters out of 6134897
- 559167 words of memory out of 5000000
+ 19492 strings out of 492982
+ 355233 string characters out of 6134897
+ 560980 words of memory out of 5000000
  22506 multiletter control sequences out of 15000+600000
- 43612 words of font info for 126 fonts, out of 8000000 for 9000
+ 43788 words of font info for 125 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,11n,54p,1352b,339s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,12n,54p,1573b,440s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/
 fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ncov.pdf (5 pages, 2282194 bytes).
+msfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/urw/times/utmri8a.pfb>
+Output written on ncov.pdf (6 pages, 2291109 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
- 136 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
+ 159 PDF objects out of 1000 (max. 8388607)
+ 132 compressed objects within 2 object streams
+ 38 named destinations out of 1000 (max. 500000)
  18972 words of extra memory for PDF output out of 20736 (max. 10000000)
 

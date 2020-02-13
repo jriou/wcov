@@ -1,46 +1,55 @@
 This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: ncov.aux
-The style file: unsrt.bst
+The style file: ieeetr.bst
 Database file #1: ncov.bib.bib
+Repeated entry---line 177 of file ncov.bib.bib
+ : @article{oh2015middle
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 186 of file ncov.bib.bib
+ : @article{assiri2013hospital
+ :                            ,
+I'm skipping whatever remains of this entry
 You've used 16 entries,
-            1791 wiz_defined-function locations,
-            544 strings with 7573 characters,
-and the built_in function-call counts, 3616 in all, are:
-= -- 239
-> -- 308
+            1876 wiz_defined-function locations,
+            580 strings with 7652 characters,
+and the built_in function-call counts, 4544 in all, are:
+= -- 377
+> -- 318
 < -- 0
-+ -- 110
-- -- 94
-* -- 288
-:= -- 639
-add.period$ -- 47
++ -- 113
+- -- 97
+* -- 376
+:= -- 710
+add.period$ -- 17
 call.type$ -- 16
 change.case$ -- 15
 chr.to.int$ -- 0
 cite$ -- 16
-duplicate$ -- 115
-empty$ -- 307
-format.name$ -- 94
-if$ -- 752
+duplicate$ -- 183
+empty$ -- 369
+format.name$ -- 97
+if$ -- 1049
 int.to.chr$ -- 0
 int.to.str$ -- 16
-missing$ -- 9
-newline$ -- 82
+missing$ -- 11
+newline$ -- 52
 num.names$ -- 14
-pop$ -- 50
+pop$ -- 45
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 58
+skip$ -- 143
 stack$ -- 0
-substring$ -- 126
-swap$ -- 17
+substring$ -- 232
+swap$ -- 77
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 23
+while$ -- 35
 width$ -- 18
-write$ -- 162
+write$ -- 147
+(There were 2 error messages)
